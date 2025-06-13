@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a className="navbar-brand" href="#">
             Navbar
           </a>
           <button
@@ -89,10 +89,10 @@ export default function Home() {
         </div>
       </nav>
 
-         <div className={styles.page}>
-      <button className="btn btn-warning">Click Me</button>
-      <h1>Next js</h1>
-    </div>
+      <div className={styles.page}>
+        <button className="btn btn-warning">Click Me</button>
+        <h1>Next js</h1>
+      </div>
     </>
   );
 }
