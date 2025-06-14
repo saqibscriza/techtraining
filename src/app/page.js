@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      {/* <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a className="navbar-brand" href="#">
             Navbar
@@ -92,7 +92,8 @@ export default function Home() {
       <div className={styles.page}>
         <button className="btn btn-warning">Click Me</button>
         <h1>Next js</h1>
-      </div>
+      </div> */}
+      Home page
     </>
   );
 }
