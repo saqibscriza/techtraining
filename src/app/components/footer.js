@@ -1,0 +1,57 @@
+'use client'; // if you're using Next.js App Router
+
+import Link from 'next/link';
+import React from 'react';
+import styled from 'styled-components';
+
+const Main = styled.div`
+  background-color: #301a52;
+  padding:60px 40px 60px 40px;
+  display:flex;
+  justify-content:space-between;
+
+  .copyright {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+
+    .scriza {
+      color: #b0b2b5;
+      transition: color 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: #fcb900;
+      }
+    }
+  }
+
+  .logo_image {
+    max-width: 100%;
+    height: auto;
+  }
+`;
+
+const Footer = () => {
+  return (
+    <Main>
+      <div className="copyright">
+        Copyright © 2025 by <span className='scriza'>Scriza</span>  <br />All Rights Reserved
+      </div>
+      <div>
+        <Link className="navbar-brand" href="/">
+          <img
+            loading="lazy"
+            className="logo_image"
+            src="//thetechtraining.in/wp-content/uploads/2018/07/t3-logo-1.png"
+            alt="The Tech Training"
+            width="190"
+            height="70"
+          />
+        </Link>
+      </div>
+    </Main>
+  );
+};
+
+export default Footer;

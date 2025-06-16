@@ -1,9 +1,11 @@
 import React from 'react'
+import PageHeader from '../components/PageHeader'
+
 
 const page = () => {
   return (
     <div>
-      Technolohies page
+      <PageHeader title="Technologies" />
     </div>
   )
 }
