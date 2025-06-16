@@ -27,7 +27,7 @@ const Title = styled.h1`
 `;
 
 const Breadcrumb = styled.div`
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
   color: #2d0c4e;
 
@@ -39,14 +39,14 @@ const Breadcrumb = styled.div`
 `;
 
 const PageHeader = ({ title }) => {
-    return (
-        <HeaderWrapper>
-            <Title>{title}</Title>
-            <Breadcrumb>
-                HOME - <span>{title.toUpperCase()}</span>
-            </Breadcrumb>
-        </HeaderWrapper>
-    );
+  return (
+    <HeaderWrapper>
+      <Title>{title}</Title>
+      <Breadcrumb>
+        HOME - <span>{title.toUpperCase()}</span>
+      </Breadcrumb>
+    </HeaderWrapper>
+  );
 };
 
 export default PageHeader;
