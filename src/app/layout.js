@@ -1,7 +1,9 @@
 
 import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.css'
-import Navbar from "./components/Navbar";
+import { Geist, Geist_Mono } from "next/font/google";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 // import Home from "./page";
 

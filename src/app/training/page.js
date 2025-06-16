@@ -1,9 +1,10 @@
 import React from 'react'
+import PageHeader from '../components/PageHeader'
 
 const training = () => {
   return (
     <div>
-      Training page
+      <PageHeader title="Training Courses" />
     </div>
   )
 }
