@@ -27,7 +27,7 @@ const Title = styled.h1`
 `;
 
 const Breadcrumb = styled.div`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   color: #2d0c4e;
 

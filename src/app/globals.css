@@ -44,3 +44,23 @@ a {
     color-scheme: dark;
   }
 }
+
+/* MY CSS ------------------- */
+
+
+
+.navbar {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  min-height: 50px; 
+}
+
+.navbar-brand img {
+  height: 40px; 
+}
+
+.navbar-nav .nav-link {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  font-size: 0.9rem; 
+}
