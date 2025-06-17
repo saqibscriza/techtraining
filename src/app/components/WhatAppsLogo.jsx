@@ -1,6 +1,4 @@
 
-
-
 'use client'
 
 import React from 'react';
@@ -23,7 +21,6 @@ const Image = styled.div`
   &:hover {
     width: 85px;
     height: 85px;
-    /* box-shadow: 0 0 0 2px #00000040;  */
   }
 `;
 
