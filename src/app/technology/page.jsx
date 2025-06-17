@@ -110,6 +110,7 @@ const page = () => {
             </div>
 
           </Conainer1>
+
           <Conainer1 className='mt-5'>
             <div>
               <h3>Full Stack Technologies</h3>

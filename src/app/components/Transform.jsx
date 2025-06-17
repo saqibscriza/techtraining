@@ -54,7 +54,11 @@ const ApplyButton = styled.button`
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top:20px;
-
+  &:hover {
+    background-color: #d9366d; /* Slightly darker shade */
+    /* Optional: add slight scale effect */
+    transform: scale(1.02);
+  }
  
 
   @media (max-width: 768px) {
@@ -64,24 +68,24 @@ const ApplyButton = styled.button`
 `;
 
 const Transform = () => {
-    return (
-        <BannerWrapper>
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-lg-10">
-                        <ApplyNow>Apply Now</ApplyNow>
-                        <Headline>6 Months to Transform Your Career!</Headline>
-                        <SubText>
-                            Join the Best Industrial Training Program in Noida with 100% Job Assistance.
-                        </SubText>
-                        <ApplyButton className="btn">
-                            Apply Now
-                        </ApplyButton>
-                    </div>
-                </div>
-            </div>
-        </BannerWrapper>
-    );
+  return (
+    <BannerWrapper>
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-lg-10">
+            <ApplyNow>Apply Now</ApplyNow>
+            <Headline>6 Months to Transform Your Career!</Headline>
+            <SubText>
+              Join the Best Industrial Training Program in Noida with 100% Job Assistance.
+            </SubText>
+            <ApplyButton className="btn">
+              Apply Now
+            </ApplyButton>
+          </div>
+        </div>
+      </div>
+    </BannerWrapper>
+  );
 };
 
 export default Transform;
