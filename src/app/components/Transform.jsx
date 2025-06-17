@@ -3,6 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Link from 'next/link';
 
 const BannerWrapper = styled.section`
   background: linear-gradient(
@@ -74,9 +75,12 @@ const Transform = () => {
                         <SubText>
                             Join the Best Industrial Training Program in Noida with 100% Job Assistance.
                         </SubText>
-                        <ApplyButton className="btn">
+                        <Link href="/contactus">
+                         <ApplyButton className="btn">
                             Apply Now
                         </ApplyButton>
+                        </Link>
+                       
                     </div>
                 </div>
             </div>
