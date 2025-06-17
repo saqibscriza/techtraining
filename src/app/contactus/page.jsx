@@ -3,7 +3,7 @@
 import React from "react";
 import PageHeader from "../components/PageHeader";
 import styled from 'styled-components';
-
+import WhatAppsLogo from "/Users/saqib/Documents/My data/TechTraining/techtraining/src/app/components/WhatAppsLogo.jsx"; 
 
 const ContactWrapper = styled.div`
 
@@ -93,6 +93,7 @@ const page = () => {
     <ContactWrapper>
       <div >
         <PageHeader title="Contacts" />
+        <WhatAppsLogo />
       </div>
       <div className="container-fluid">
         <div>
