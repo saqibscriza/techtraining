@@ -55,7 +55,11 @@ const ApplyButton = styled.button`
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top:20px;
-
+  &:hover {
+    background-color: #d9366d; /* Slightly darker shade */
+    /* Optional: add slight scale effect */
+    transform: scale(1.02);
+  }
  
 
   @media (max-width: 768px) {

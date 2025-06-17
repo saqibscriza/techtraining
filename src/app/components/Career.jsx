@@ -50,6 +50,7 @@ const Career = () => {
                 CONNECT NOW
               </ConnectButton>
             </Link>
+
           </ContentWrapper>
         </div>
       </div>
@@ -129,7 +130,6 @@ const Description = styled.p`
   line-height: 1.6;
   color: #3f354d;
   margin-bottom: 2rem;
-
   @media (max-width: 768px) {
     font-size: 1rem;
   }
@@ -147,9 +147,8 @@ const ConnectButton = styled.button`
   letter-spacing: 1px;
 
   &:hover { 
-    background-color: #4338ca;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #d9366d;
+    color:white,
   }
 
   @media (max-width: 768px) {
