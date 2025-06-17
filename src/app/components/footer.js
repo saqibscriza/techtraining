@@ -4,33 +4,6 @@ import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 
-// const Main = styled.div`
-//   background-color: #301a52;
-//   padding:60px 40px 60px 40px;
-//   display:flex;
-//   justify-content:space-between;
-
-//   .copyright {
-//     font-size: 18px;
-//     color: #fff;
-//     margin-bottom: 15px;
-
-//     .scriza {
-//       color: #b0b2b5;
-//       transition: color 0.3s ease;
-//       cursor: pointer;
-
-//       &:hover {
-//         color: #fcb900;
-//       }
-//     }
-//   }
-
-//   .logo_image {
-//     max-width: 100%;
-//     height: auto;
-//   }
-// `;
 
 const Main = styled.div`
   background-color: #1d1131;
