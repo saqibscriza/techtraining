@@ -3,54 +3,58 @@ import React from 'react';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'next/image';
+import Link from 'next/link';
+
 
 const Career = () => {
-    return (
-        <BannerContainer className="container-fluid">
-            <div className="row align-items-center">
-                {/* Image Column */}
-                <div className="col-lg-6 col-md-12 order-lg-1 order-1">
-                    <ImageWrapper>
-                        <Image
-                            src="/career.webp"
-                            alt="Industrial Training"
+  return (
+    <BannerContainer className="container-fluid">
+      <div className="row align-items-center">
+        {/* Image Column */}
+        <div className="col-lg-6 col-md-12 order-lg-1 order-1">
+          <ImageWrapper>
+            <Image
+              src="/career.webp"
+              alt="Industrial Training"
 
-                            className="img-fluid"
-                            style={{
-                                objectFit: 'cover',
-                                objectPosition: 'center'
-                            }}
-                            priority
-                            height={800}
-                            width={550}
-                        />
-                    </ImageWrapper>
-                </div>
+              className="img-fluid"
+              style={{
+                objectFit: 'cover',
+                objectPosition: 'center'
+              }}
+              priority
+              height={800}
+              width={550}
+            />
+          </ImageWrapper>
+        </div>
 
-                {/* Text Content Column */}
-                <div className="col-lg-6 col-md-12 order-lg-2 order-2">
-                    <ContentWrapper className="px-4 py-5">
-                        <Heading className="mb-4">
-                            6 Months to<br />
-                            Transform Your<br />
-                            <HighlightedText>Career!</HighlightedText>
-                        </Heading>
+        {/* Text Content Column */}
+        <div className="col-lg-6 col-md-12 order-lg-2 order-2">
+          <ContentWrapper className="px-4 py-5">
+            <Heading className="mb-4">
+              6 Months to<br />
+              Transform Your<br />
+              <HighlightedText>Career!</HighlightedText>
+            </Heading>
 
-                        <Description className="mb-4">
-                            Our 6-month Industrial Training program is well-planned to develop both theoretical
-                            knowledge and practical exposure. This program is best for students as well as working
-                            professionals wanting to enhance their skills further. On completion, participants are
-                            awarded a certificate and receive 100% job assistance.
-                        </Description>
+            <Description className="mb-4">
+              Our 6-month Industrial Training program is well-planned to develop both theoretical
+              knowledge and practical exposure. This program is best for students as well as working
+              professionals wanting to enhance their skills further. On completion, participants are
+              awarded a certificate and receive 100% job assistance.
+            </Description>
 
-                        <ConnectButton className="btn">
-                            CONNECT NOW
-                        </ConnectButton>
-                    </ContentWrapper>
-                </div>
-            </div>
-        </BannerContainer>
-    );
+            <Link href="/contactus">
+              <ConnectButton className="btn" >
+                CONNECT NOW
+              </ConnectButton>
+            </Link>
+          </ContentWrapper>
+        </div>
+      </div>
+    </BannerContainer>
+  );
 };
 
 // Styled Components
