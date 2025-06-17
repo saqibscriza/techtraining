@@ -4,6 +4,7 @@ import AboutT3 from '../components/AboutT3'
 import Special from '../components/Special'
  
 const page = () => {
+  console.log('main')
 return (
 <div>
 <PageHeader title="About Us" />
