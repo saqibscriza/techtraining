@@ -3,6 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'next/image';
+import Link from 'next/link';
+
 
 const Career = () => {
   return (
@@ -43,9 +45,12 @@ const Career = () => {
               awarded a certificate and receive 100% job assistance.
             </Description>
 
-            <ConnectButton className="btn">
-              CONNECT NOW
-            </ConnectButton>
+            <Link href="/contactus">
+              <ConnectButton className="btn" >
+                CONNECT NOW
+              </ConnectButton>
+            </Link>
+
           </ContentWrapper>
         </div>
       </div>
@@ -125,7 +130,6 @@ const Description = styled.p`
   line-height: 1.6;
   color: #3f354d;
   margin-bottom: 2rem;
-
   @media (max-width: 768px) {
     font-size: 1rem;
   }
@@ -145,8 +149,6 @@ const ConnectButton = styled.button`
   &:hover { 
     background-color: #d9366d;
     color:white,
-   
-    
   }
 
   @media (max-width: 768px) {

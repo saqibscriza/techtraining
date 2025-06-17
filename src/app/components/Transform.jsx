@@ -3,6 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Link from 'next/link';
 
 const BannerWrapper = styled.section`
   background: linear-gradient(
@@ -68,24 +69,27 @@ const ApplyButton = styled.button`
 `;
 
 const Transform = () => {
-  return (
-    <BannerWrapper>
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-lg-10">
-            <ApplyNow>Apply Now</ApplyNow>
-            <Headline>6 Months to Transform Your Career!</Headline>
-            <SubText>
-              Join the Best Industrial Training Program in Noida with 100% Job Assistance.
-            </SubText>
-            <ApplyButton className="btn">
-              Apply Now
-            </ApplyButton>
-          </div>
-        </div>
-      </div>
-    </BannerWrapper>
-  );
+    return (
+        <BannerWrapper>
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-lg-10">
+                        <ApplyNow>Apply Now</ApplyNow>
+                        <Headline>6 Months to Transform Your Career!</Headline>
+                        <SubText>
+                            Join the Best Industrial Training Program in Noida with 100% Job Assistance.
+                        </SubText>
+                        <Link href="/contactus">
+                         <ApplyButton className="btn">
+                            Apply Now
+                        </ApplyButton>
+                        </Link>
+                       
+                    </div>
+                </div>
+            </div>
+        </BannerWrapper>
+    );
 };
 
 export default Transform;

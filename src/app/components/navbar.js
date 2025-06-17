@@ -12,6 +12,7 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#301a52' }}>
       <div className="container-fluid">
+        
         <Link className="navbar-brand" href="/">
           <img
             loading="lazy"
