@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import StyledComponentsRegistry from "./registry";
 
 // import Home from "./page";
 
@@ -26,9 +27,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <StyledComponentsRegistry>
+          <Navbar />
+          {children}
+          <Footer />
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
