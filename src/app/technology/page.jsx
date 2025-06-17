@@ -3,6 +3,7 @@
 import React from 'react'
 import PageHeader from '../components/PageHeader'
 import styled from 'styled-components';
+import WhatAppsLogo from "/Users/saqib/Documents/My data/TechTraining/techtraining/src/app/components/WhatAppsLogo.jsx"; 
 
 const ContactWrapper = styled.div`
 `;
@@ -25,7 +26,7 @@ const page = () => {
   return (
     <div>
       <PageHeader title="Technologies" />
-
+      <WhatAppsLogo />
       <div>
         <Container2 className='container-fluid'>
           <Conainer1 className='mt-5'>
@@ -36,31 +37,31 @@ const page = () => {
               <div className='col-10'>
                 <div className='row'>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div style={{ padding: '20px', width:'210px' }} >
+                    <div style={{ padding: '20px', width: '210px' }} >
                       <img style={{ width: '100%', height: '50%' }} src="https://thetechtraining.in/wp-content/uploads/2025/06/html.webp" alt="" />
                     </div>
                   </div>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div style={{ padding: '20px', width:'210px' }} >
+                    <div style={{ padding: '20px', width: '210px' }} >
                       <img style={{ width: '100%', height: '50%' }} src="	https://thetechtraining.in/wp-content/uploads/2025/06/csss.webp" alt="" />
                     </div>
                   </div>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div style={{ padding: '20px', width:'210px' }} >
+                    <div style={{ padding: '20px', width: '210px' }} >
                       <img style={{ width: '100%', height: '50%' }} src="	https://thetechtraining.in/wp-content/uploads/2025/06/js.webp" alt="" />
                     </div>
                   </div>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div style={{ padding: '20px', width:'210px' }} >
+                    <div style={{ padding: '20px', width: '210px' }} >
                       <img style={{ width: '100%', height: '50%' }} src="	https://thetechtraining.in/wp-content/uploads/2025/06/react-1.webp" alt="" />
                     </div>
                   </div>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div style={{ padding: '20px', width:'210px' }} >
+                    <div style={{ padding: '20px', width: '210px' }} >
                       <img style={{ width: '100%', height: '50%' }} src="https://thetechtraining.in/wp-content/uploads/2025/06/ajs.webp" alt="" />
                     </div>
                   </div>
-               
+
                 </div>
               </div>
               <div className='col-2'></div>
@@ -76,31 +77,31 @@ const page = () => {
               <div className='col-10'>
                 <div className='row'>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div style={{ padding: '20px', width:'210px' }} >
+                    <div style={{ padding: '20px', width: '210px' }} >
                       <img style={{ width: '100%', height: '50%' }} src="https://thetechtraining.in/wp-content/uploads/2025/06/python.webp" alt="" />
                     </div>
                   </div>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div style={{ padding: '20px', width:'210px' }} >
+                    <div style={{ padding: '20px', width: '210px' }} >
                       <img style={{ width: '100%', height: '50%' }} src="https://thetechtraining.in/wp-content/uploads/2025/06/php.webp" alt="" />
                     </div>
                   </div>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div style={{ padding: '20px', width:'210px' }} >
+                    <div style={{ padding: '20px', width: '210px' }} >
                       <img style={{ width: '100%', height: '50%' }} src="	https://thetechtraining.in/wp-content/uploads/2025/06/nodee.webp" alt="" />
                     </div>
                   </div>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div style={{ padding: '20px', width:'210px' }} >
+                    <div style={{ padding: '20px', width: '210px' }} >
                       <img style={{ width: '100%', height: '50%' }} src="https://thetechtraining.in/wp-content/uploads/2025/06/rrr.webp" alt="" />
                     </div>
                   </div>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div style={{ padding: '20px', width:'210px' }} >
+                    <div style={{ padding: '20px', width: '210px' }} >
                       <img style={{ width: '100%', height: '50%' }} src="https://thetechtraining.in/wp-content/uploads/2025/06/javaaa.png" alt="" />
                     </div>
                   </div>
-               
+
                 </div>
               </div>
               <div className='col-2'></div>
@@ -116,12 +117,12 @@ const page = () => {
               <div className='col-10'>
                 <div className='row'>
                   <div className='col-lg-6 col-md-12 col-sm-12'>
-                    <div style={{ padding: '20px', width:'450px' }} >
+                    <div style={{ padding: '20px', width: '450px' }} >
                       <img style={{ width: '100%', height: '50%' }} src="https://thetechtraining.in/wp-content/uploads/2025/06/1-1.webp" alt="" />
                     </div>
                   </div>
                   <div className='col-lg-6 col-md-12 col-sm-12'>
-                    <div style={{ padding: '20px', width:'450px' }} >
+                    <div style={{ padding: '20px', width: '450px' }} >
                       <img style={{ width: '100%', height: '50%' }} src="https://thetechtraining.in/wp-content/uploads/2025/06/2-2.webp" alt="" />
                     </div>
                   </div>
@@ -139,12 +140,12 @@ const page = () => {
               <div className='col-10'>
                 <div className='row'>
                   <div className='col-lg-6 col-md-12 col-sm-12'>
-                    <Responsive className='responsive' style={{ padding: '20px', width:'450px' }} >
+                    <Responsive className='responsive' style={{ padding: '20px', width: '450px' }} >
                       <img style={{ width: '100%', height: '50%' }} src="https://thetechtraining.in/wp-content/uploads/2025/06/1-1.webp" alt="" />
                     </Responsive>
                   </div>
                   <div className='col-lg-6 col-md-12 col-sm-12'>
-                    <div style={{ padding: '20px', width:'450px' }} >
+                    <div style={{ padding: '20px', width: '450px' }} >
                       <img style={{ width: '100%', height: '50%' }} src="https://thetechtraining.in/wp-content/uploads/2025/06/2-2.webp" alt="" />
                     </div>
                   </div>

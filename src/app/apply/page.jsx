@@ -4,6 +4,7 @@ import React from "react";
 import PageHeader from "../components/PageHeader";
 
 import styled from 'styled-components';
+import WhatAppsLogo from "/Users/saqib/Documents/My data/TechTraining/techtraining/src/app/components/WhatAppsLogo.jsx";
 
 
 const ContactWrapper = styled.div`
@@ -90,10 +91,11 @@ const Form1 = styled.div`
 
 const page = () => {
 
- return (
+  return (
     <ContactWrapper>
       <div >
         <PageHeader title="Contacts" />
+        <WhatAppsLogo />
       </div>
       <div className="container-fluid">
         <div>
@@ -167,7 +169,7 @@ const page = () => {
 
 
         <div style={{ display: 'flex', justifyContent: 'center' }} >
-          <FormContainer style={{ backgroundColor: '#301a52',  }} className="mb-5">
+          <FormContainer style={{ backgroundColor: '#301a52', }} className="mb-5">
             <Container2 className="pt-5">
               <div>
                 <StyledH52>Have a Question?</StyledH52>
