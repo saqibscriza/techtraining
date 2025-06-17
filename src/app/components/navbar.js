@@ -37,7 +37,7 @@ export default function Navbar() {
 
         {/* My Navbar  */}
         <div className={`collapse navbar-collapse p-3 ${isOpen ? 'show' : ''}`} id="navbarNav">
-          <ul className="navbar-nav ms-auto gap-lg-4 gap-2 text-center">
+          <ul className="navbar-nav ms-auto gap-lg-3 gap-md-2 gap-1 text-center">
             <li className="nav-item">
               <Link className={`nav-link ${pathname === '/' ? 'active' : ''}`} href="/">HOME</Link>
             </li>
