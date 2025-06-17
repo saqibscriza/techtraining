@@ -211,7 +211,7 @@ const Testimonials = () => {
       rating: "★★★★★",
       title: "Excellent Training Experience!",
       content: "I enrolled in the Full Stack Development course at The Tech Training – T3, and it was a game-changer for my career. The instructors are highly knowledgeable and focus on real-world applications. Thanks to their hands-on training, I secured a job within two months of completing the course!",
-      image: "/images/career.jpeg" // Added image path
+      image: "/career.jpeg"
     },
     {
       id: 2,
