@@ -27,7 +27,7 @@ const Title = styled.h1`
 `;
 
 const Breadcrumb = styled.div`
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   color: #2d0c4e;
 
@@ -50,3 +50,4 @@ const PageHeader = ({ title }) => {
 };
 
 export default PageHeader;
+
