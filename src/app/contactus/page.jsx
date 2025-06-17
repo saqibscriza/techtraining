@@ -3,7 +3,8 @@
 import React from "react";
 import PageHeader from "../components/PageHeader";
 import styled from 'styled-components';
-import WhatAppsLogo from "/Users/saqib/Documents/My data/TechTraining/techtraining/src/app/components/WhatAppsLogo.jsx"; 
+import WhatAppsLogo from "../components/WhatAppsLogo";
+
 
 const ContactWrapper = styled.div`
 
