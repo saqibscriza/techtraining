@@ -45,8 +45,6 @@ const WhatAppsLogo = () => {
                         </defs>
                     </svg>
                 </a>
-
-
             </Image>
         </ContactWrapper>
     );
