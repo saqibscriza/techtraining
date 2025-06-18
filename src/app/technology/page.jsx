@@ -168,12 +168,12 @@ const page = () => {
                 <div className='row gap-2'>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
                     <ResponsiveImg>
-                      <img  src="/PythonLogo.svg" alt="Python Logo" />
+                      <img  src="/Pythonlogo.svg" alt="Python Logo" />
                     </ResponsiveImg>
                   </div>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
                     <ResponsiveImg2 >
-                      <img   src="/PhpLogosvg.svg" alt="Php Logo" />
+                      <img   src="/PhPLogosvg.svg" alt="Php Logo" />
                     </ResponsiveImg2>
                   </div>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
