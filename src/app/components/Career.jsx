@@ -16,7 +16,6 @@ const Career = () => {
             <Image
               src="/career.webp"
               alt="Industrial Training"
-
               className="img-fluid"
               style={{
                 objectFit: 'cover',

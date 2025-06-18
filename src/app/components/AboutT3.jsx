@@ -42,6 +42,9 @@ const AboutT3 = () => {
                         </div>
                     </div>
 
+
+
+
                     {/* Right Side - Features */}
                     <div className="col-lg-5">
                         <FeaturesContainer className="h-100 d-flex align-items-center"> {/* New wrapper div */}
