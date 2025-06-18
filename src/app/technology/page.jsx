@@ -164,21 +164,18 @@ const page = () => {
               <h3>Back-End Technologies</h3>
             </div>
             <div className='row ' style={{ margin: '' }}>
-
               <div className='col-12'>
                 <div className='row gap-2'>
-
                   <div className='col-lg-2 col-md-4 col-sm-6'>
                     <ResponsiveImg>
-                      <img className='responsiveCols' src="/PythonLogo.svg" alt="Python Logo" />
+                      <img  src="/PythonLogo.svg" alt="Python Logo" />
                     </ResponsiveImg>
                   </div>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
                     <ResponsiveImg2 >
-                      <img className='responsiveCols'  src="/PhpLogosvg.svg" alt="Php Logo" />
+                      <img   src="/PhpLogosvg.svg" alt="Php Logo" />
                     </ResponsiveImg2>
                   </div>
-                
                   <div className='col-lg-2 col-md-4 col-sm-6'>
                     <ResponsiveImg3  >
                       <img  src="/NodeJsLogo.svg" alt="Node Logo" />
