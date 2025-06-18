@@ -48,3 +48,4 @@ const WhatAppsLogo = () => {
 };
 
 export default WhatAppsLogo;
+
