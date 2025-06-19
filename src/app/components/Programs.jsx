@@ -1,16 +1,21 @@
 'use client';
+
+import { useRouter } from 'next/navigation';
 import React from 'react';
 import styled from 'styled-components';
 
 const Programs = () => {
+    const router = useRouter();
     const programs = [
         {
-            title: "Backend Development",
-            description: "Master scalable server-side technologies",
+            id: 'frontend',
+            title: "Frontend Development",
+            description: "Learn HTML, CSS, JavaScript and frameworks like React, Vue to build responsive websites.",
         },
         {
-            title: "Full-Stack Development",
-            description: "Learn front-end to back-end with MERN/MEAN stacks.",
+            id: 'backend',
+            title: "Backend Development",
+            description: "Master scalable server-side technologies",
         },
         {
             title: "Mobile App Development",
@@ -27,8 +32,21 @@ const Programs = () => {
         {
             title: "Software Testing",
             description: "Ensure software quality with top testing tools.",
+        }, {
+            title: "Software Testing",
+            description: "Ensure software quality with top testing tools.",
+        }, {
+            title: "Software Testing",
+            description: "Ensure software quality with top testing tools.",
+        }, {
+            title: "Software Testing",
+            description: "Ensure software quality with top testing tools.",
         }
     ];
+
+    const handleProgramSelect = (programId) => {
+        router.push(`/programs/${programId}`);
+    };
 
     return (
         <Container>
@@ -43,7 +61,7 @@ const Programs = () => {
                             <ProgramTitle>{program.title}</ProgramTitle>
                             <ProgramDescription>{program.description}</ProgramDescription>
                         </ProgramCard>
-                        <ProgramButton>CHOOSE THIS PROGRAM</ProgramButton>
+                        <ProgramButton onClick={() => handleProgramSelect(program.id)}>CHOOSE THIS PROGRAM</ProgramButton>
                     </ProgramWrapper>
                 ))}
             </ProgramsContainer>
