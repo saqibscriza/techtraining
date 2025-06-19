@@ -120,6 +120,7 @@ const page = () => {
       <WhatAppsLogo />
       <div>
         <Container2 className='container-fluid'>
+          
           <Conainer1 className='mt-5'>
             <div >
               <h3>Front-End Technologies</h3>
@@ -157,8 +158,6 @@ const page = () => {
               <div className='col-2'></div>
             </div>
           </Conainer1>
-
-
           <Conainer1 className='mt-5'>
             <div>
               <h3>Back-End Technologies</h3>
@@ -168,17 +167,17 @@ const page = () => {
                 <div className='row gap-2'>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
                     <ResponsiveImg>
-                      <img  src="/Pythonlogo.svg" alt="Python Logo" />
+                      <img src="/Pythonlogo.svg" alt="Python Logo" />
                     </ResponsiveImg>
                   </div>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
                     <ResponsiveImg2 >
-                      <img   src="/PhPLogosvg.svg" alt="Php Logo" />
+                      <img src="/PhPLogosvg.svg" alt="Php Logo" />
                     </ResponsiveImg2>
                   </div>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
                     <ResponsiveImg3  >
-                      <img  src="/NodeJsLogo.svg" alt="Node Logo" />
+                      <img src="/NodeJsLogo.svg" alt="Node Logo" />
                     </ResponsiveImg3>
                   </div>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
@@ -188,18 +187,14 @@ const page = () => {
                   </div>
                   <div className='col-lg-2 col-md-4 col-sm-6'>
                     <ResponsiveImg5  >
-                      <img  src="/jsLogo.png" alt="jsLogo" />
+                      <img src="/jsLogo.png" alt="jsLogo" />
                     </ResponsiveImg5>
                   </div>
-
-
                 </div>
               </div>
               {/* <div className='col-2'></div> */}
             </div>
-
           </Conainer1>
-
           <Conainer1 className='mt-5'>
             <div>
               <h3>Full Stack Technologies</h3>
@@ -222,7 +217,6 @@ const page = () => {
               <div className='col-2'></div>
             </div>
           </Conainer1>
-
           <Conainer1 className='mt-5 mb-4'>
             <div>
               <h3>App Development Technologies</h3>
@@ -245,6 +239,7 @@ const page = () => {
               <div className='col-2'></div>
             </div>
           </Conainer1>
+
         </Container2>
       </div>
 
