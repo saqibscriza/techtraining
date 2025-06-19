@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
+
 const Testimonials = () => {
   const testimonials = [
     {
@@ -169,11 +170,10 @@ const TestimonialImageContainer = styled.div`
 `;
 
 const TestimonialImage = styled.img`
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   object-fit: cover;
   border-radius: 50%;
-
 `;
 
 const TestimonialRating = styled.div`
