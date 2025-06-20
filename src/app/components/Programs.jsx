@@ -140,7 +140,7 @@ position:relative;
     transition: transform 0.3s ease;
     border: 2px solid #4a287c;
     width: 100%;
-    min-height:230px;
+    min-height:250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
