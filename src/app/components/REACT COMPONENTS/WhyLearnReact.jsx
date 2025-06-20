@@ -38,6 +38,7 @@ const WhyLearnReact = () => {
 // Styled Components
 const SectionContainer = styled.section`
   background-color: #f8f9fa;
+  padding:0px 8rem;
 `;
 
 const Heading = styled.div`
