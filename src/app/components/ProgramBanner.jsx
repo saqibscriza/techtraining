@@ -18,10 +18,10 @@ const ProgramBanner = ({ title }) => {
                 <BannerTitle>{title}</BannerTitle>
                 <BannerImageContainer>
                     <Image
-                        src="/ProgramBannerLine.svg" // Replace with your image path
+                        src="/ProgramBannerLine.svg" 
                         alt="Frontend Technologies"
-                        width={300} // Adjust as needed
-                        height={20} // Adjust as needed
+                        width={300} 
+                        height={20} 
                         style={{ objectFit: 'contain' }}
                     />
                 </BannerImageContainer>
