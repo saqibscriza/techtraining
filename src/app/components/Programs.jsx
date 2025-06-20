@@ -10,37 +10,37 @@ const Programs = () => {
         {
             id: 'frontend',
             title: "Frontend Development",
-            description: "Learn HTML, CSS, JavaScript and frameworks like React, Vue to build responsive websites.",
+            description: "HTML, CSS, Javascript, react.js, Angular , next js",
         },
         {
             id: 'backend',
             title: "Backend Development",
-            description: "Master scalable server-side technologies",
+            description: "Java, Node.js, C#, Ruby, Python, PHP",
         },
         {
             title: "Mobile App Development",
-            description: "Create responsive apps for Android and iOS.",
+            description: "Andriod, Flutter",
         },
         {
             title: "Digital Marketing",
-            description: "Become a pro in SEO, social media, and online advertising.",
+            // description: "Become a pro in SEO, social media, and online advertising.",
         },
         {
             title: "Database Management",
-            description: "Learn SQL, MySQL, MongoDB, and more.",
+            description: "Relational (SQL) Databases, MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server, Google Cloud SQL, Azure SQL Database",
         },
         {
             title: "Software Testing",
-            description: "Ensure software quality with top testing tools.",
+            // description: "Ensure software quality with top testing tools.",
         }, {
-            title: "Software Testing",
-            description: "Ensure software quality with top testing tools.",
+            title: "Full Stack",
+            description: "Mean, Mern ",
         }, {
-            title: "Software Testing",
-            description: "Ensure software quality with top testing tools.",
+            title: " Graphic design ",
+            // description: "Ensure software quality with top testing tools.",
         }, {
-            title: "Software Testing",
-            description: "Ensure software quality with top testing tools.",
+            title: " Prompt Engineering",
+            // description: "Ensure software quality with top testing tools.",
         }
     ];
 
