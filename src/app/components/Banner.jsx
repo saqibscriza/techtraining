@@ -6,7 +6,6 @@ import Image from 'next/image';
 const Banner = () => {
   return (
     <BannerContainer>
-      {/* Background Image using next/image */}
       <BackgroundImage
         src="/Banner.jpeg" 
         alt="Banner Background"
