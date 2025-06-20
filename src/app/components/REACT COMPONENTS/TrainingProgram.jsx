@@ -45,10 +45,8 @@ const TrainingProgram = () => {
                                 <BenefitItem key={benefit.id}>
                                     <BenefitNumber>{benefit.id}</BenefitNumber>
                                     <BenefitContent>
-                                        <h3>
-                                            <BenefitTitle>{benefit.title}:</BenefitTitle>
-                                        </h3>
-                                        <p>{benefit.description}</p>
+                                        <BenefitTitle>{benefit.title}: </BenefitTitle>
+                                        <BenefitDescription>{benefit.description}</BenefitDescription>
                                     </BenefitContent>
                                 </BenefitItem>
                             ))}
@@ -74,7 +72,7 @@ const TrainingProgram = () => {
 // Styled Components
 const ProgramBenefits = styled.section`
   background-color: #f8f9fa;
-  padding: 4rem 0;
+  padding: 4rem 8rem;
 `;
 
 const SectionHeader = styled.div`
@@ -114,33 +112,33 @@ const BenefitItem = styled.li`
 `;
 
 const BenefitNumber = styled.div`
-  font-size: 1.8rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: #F48B01;
-  min-width: 2.5rem;
+  color: #2F327D;
+  min-width: 2rem;
 `;
 
 const BenefitContent = styled.div`
-  h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #2F327D;
-    margin: 0 0 0.5rem 0;
-    display: inline;
-  }
-  
-  p {
-    color: #696984;
-    line-height: 1.6;
-    margin: 0;
-    display: inline;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex: 1;
 `;
 
 const BenefitTitle = styled.span`
-  color: #2F327D;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #696984;
 `;
+
+const BenefitDescription = styled.span`
+  color: #696984;
+  line-height: 1.6;
+  font-size: 1rem;
+  font-weight: 400;
+`;
+
 
 const ImageContainer = styled.div`
   padding: 1rem;

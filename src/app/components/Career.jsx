@@ -60,7 +60,7 @@ const Career = () => {
 // Styled Components
 const BannerContainer = styled.div`
   background-color: #f8f9fa;
-  padding: 4rem 0;
+
 
   @media (max-width: 992px) {
     padding: 2rem 0;

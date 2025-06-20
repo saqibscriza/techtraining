@@ -20,6 +20,10 @@ const FAQSection = () => {
     {
       question: "Are there live projects in the course?",
       answer: "Yes, the course includes hands-on live projects to build your portfolio."
+    },
+    {
+      question: " Do you have job placement support?",
+      answer: "Yes, we even have  job placement support , resume writing, preparation for interviews, and more and even some referrals to great companies."
     }
   ];
 
@@ -28,7 +32,6 @@ const FAQSection = () => {
   };
 
   return (
-
     <FAQContainer className="py-5">
       <Main className="container">
         <SectionHeader className="mb-3">
@@ -38,22 +41,25 @@ const FAQSection = () => {
         <div className="row">
           <div className="col-lg-12">
             <AccordionWrapper>
-              {faqs.map((faq, index) => (
-                <AccordionItem key={index}>
-                  <AccordionHeader
-                    onClick={() => toggleAccordion(index)}
-                    active={activeIndex === index}
-                  >
-                    {faq.question}
-                    <AccordionIcon active={activeIndex === index}>
-                      {activeIndex === index ? '-' : '+'}
-                    </AccordionIcon>
-                  </AccordionHeader>
-                  <AccordionContent active={activeIndex === index}>
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
+              {faqs.map((faq, index) => {
+                const isActive = activeIndex === index;
+                return (
+                  <AccordionItem key={index}>
+                    <AccordionHeader
+                      onClick={() => toggleAccordion(index)}
+                      $isActive={isActive} // Using transient prop
+                    >
+                      {faq.question}
+                      <AccordionIcon $isActive={isActive}>
+                        {isActive ? '-' : '+'}
+                      </AccordionIcon>
+                    </AccordionHeader>
+                    <AccordionContent $isActive={isActive}>
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                );
+              })}
             </AccordionWrapper>
           </div>
         </div>
@@ -65,12 +71,14 @@ const FAQSection = () => {
 // Styled Components
 const FAQContainer = styled.section`
   background-color: #f8f9fa;
-  padding:1rem 5rem;
+  padding: 1rem 5rem;
 `;
+
 const Main = styled.div`
   border: 1px solid #eee;
-  padding:1rem 2rem;
+  padding: 1rem 2rem;
 `;
+
 const SectionHeader = styled.div`
   h2 {
     font-size: 2rem;
@@ -100,7 +108,7 @@ const AccordionHeader = styled.div`
   align-items: center;
   cursor: pointer;
   font-weight: 600;
-  color: ${props => props.active ? '#F48B01' : '#2F327D'};
+  color: ${props => props.$isActive ? '#F48B01' : '#2F327D'};
   transition: all 0.3s ease;
   
   &:hover {
@@ -110,15 +118,15 @@ const AccordionHeader = styled.div`
 
 const AccordionIcon = styled.span`
   font-size: 1.5rem;
-  color: ${props => props.active ? '#F48B01' : '#696984'};
+  color: ${props => props.$isActive ? '#F48B01' : '#696984'};
 `;
 
 const AccordionContent = styled.div`
-  padding: ${props => props.active ? '1.5rem' : '0 1.5rem'};
+  padding: ${props => props.$isActive ? '1.5rem' : '0 1.5rem'};
   background-color: white;
   color: #696984;
   line-height: 1.6;
-  max-height: ${props => props.active ? '500px' : '0'};
+  max-height: ${props => props.$isActive ? '500px' : '0'};
   overflow: hidden;
   transition: all 0.3s ease;
 `;

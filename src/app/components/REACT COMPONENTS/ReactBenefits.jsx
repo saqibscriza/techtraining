@@ -47,7 +47,7 @@ const ReactBenefits = () => {
 // Styled Components
 const BenefitsSection = styled.section`
   
-  padding: 4rem 0;
+  padding: 4rem 8.4rem;
 `;
 
 const SectionHeader = styled.div`
