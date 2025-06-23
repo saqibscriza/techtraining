@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const FAQSection = () => {
+const FAQSection = ({ title }) => {
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   const faqs = [
     {
-      question: "How many months will the training program in React JS last?",
+      question: `How many months will the training program in ${title} last?`,
       answer: "The duration of the training will be 2 to 3 months, as per your preferred schedule."
     },
     {

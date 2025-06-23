@@ -93,12 +93,11 @@ const page = () => {
 
   return (
     <ContactWrapper>
-      <div >
-        <PageHeader title="Contacts" />
-        <WhatAppsLogo />
+      <div className="mb-4">
+        <PageHeader title="Apply" />
       </div>
       <div className="container-fluid">
-        <div>
+        {/* <div>
           <Container className="pt-5">
             <div>
               <StyledH5>Contact Info</StyledH5>
@@ -165,7 +164,7 @@ const page = () => {
 
             </Box3>
           </BoxContainer>
-        </UpperFooter>
+        </UpperFooter> */}
 
 
         <div style={{ display: 'flex', justifyContent: 'center' }} >

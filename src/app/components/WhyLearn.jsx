@@ -1,22 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
-import ProgramBannerLine from '../ProgramBannerLine';
+import ProgramBannerLine from './ProgramBannerLine';
 
-const WhyLearnReact = () => {
+const WhyLearn = ({
+  title,
+  subtitle,
+  description
+}) => {
   return (
     <SectionContainer className="py-5">
       <div className="container">
         <Heading>
-          <SectionTitle>Why Learn React JS?</SectionTitle>
+          <SectionTitle>{title}</SectionTitle>
           <ProgramBannerLine width='200px' height='10px' />
         </Heading>
 
         <div className="row align-items-center">
           <div className="col-lg-6 mb-4 mb-lg-0">
             <ContentWrapper>
-              <SubTitle>React JS – <span style={{ color: "#F48C06" }}>Powering Modern</span> Web Interfaces.</SubTitle>
+              <SubTitle>{subtitle}</SubTitle>
               <Description>
-                React JS, a child of Facebook, is an extremely popular library to design an interactive user interface. With its flexibility, great performance, and community support, the skill is absolutely important to possess for web developers.
+                {description}
               </Description>
             </ContentWrapper>
           </div>
@@ -98,4 +102,4 @@ const ReactImage = styled.img`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `;
 
-export default WhyLearnReact;
+export default WhyLearn;

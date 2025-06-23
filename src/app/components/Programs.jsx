@@ -18,6 +18,7 @@ const Programs = () => {
             description: "Java, Node.js, C#, Ruby, Python, PHP",
         },
         {
+            id: 'mobile',
             title: "Mobile App Development",
             description: "Andriod, Flutter",
         },
@@ -26,6 +27,7 @@ const Programs = () => {
             // description: "Become a pro in SEO, social media, and online advertising.",
         },
         {
+            id: 'database',
             title: "Database Management",
             description: "Relational (SQL) Databases, MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server, Google Cloud SQL, Azure SQL Database",
         },
@@ -33,6 +35,7 @@ const Programs = () => {
             title: "Software Testing",
             // description: "Ensure software quality with top testing tools.",
         }, {
+            id: 'fullstack',
             title: "Full Stack",
             description: "Mean, Mern ",
         }, {
@@ -151,7 +154,6 @@ position:relative;
     }
 `;
 
-
 const ProgramTitle = styled.h3`
     font-size: 1.3rem;
     font-weight: 600;
@@ -182,10 +184,6 @@ const ProgramButton = styled.button`
         background-color: #f5b417;
     }
 `;
-
-
-
-
 
 const TrainingStrip = styled.div`
   position: absolute;
