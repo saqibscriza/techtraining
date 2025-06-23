@@ -5,6 +5,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import StyledComponentsRegistry from "./registry";
+import WhatAppsLogo from "./components/WhatAppsLogo";
+import { ModalProvider } from "./contexts/ModalContext";
 
 
 // import Home from "./page";
@@ -32,8 +34,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <StyledComponentsRegistry>
+          <WhatAppsLogo />
           <Navbar />
-          {children}
+          <ModalProvider>
+            {children}
+          </ModalProvider>
           <Footer />
         </StyledComponentsRegistry>
       </body>

@@ -4,9 +4,15 @@ import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useModal } from '../contexts/ModalContext';
+import CourseInquiryModal from './CourseInquiryModal';
 
 
 const Career = () => {
+  const { showModal, hideModal } = useModal();
+  const handleButtonClick = () => {
+    showModal(<CourseInquiryModal />);
+  };
   return (
     <BannerContainer className="container-fluid">
       <div className="row align-items-center">
@@ -44,11 +50,11 @@ const Career = () => {
               awarded a certificate and receive 100% job assistance.
             </Description>
 
-            <Link href="/contactus">
-              <ConnectButton className="btn" >
-                CONNECT NOW
-              </ConnectButton>
-            </Link>
+
+            <ConnectButton className="btn" onClick={handleButtonClick}>
+              CONNECT NOW
+            </ConnectButton>
+
 
           </ContentWrapper>
         </div>

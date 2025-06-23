@@ -259,13 +259,20 @@
 'use client';
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useModal } from '../contexts/ModalContext';
 
-const CourseInquiryModal = ({ show, onClose }) => {
-  if (!show) return null;
+const CourseInquiryModal = ({ onClose }) => {
+
+  const { hideModal } = useModal();
+
+  const handleClose = () => {
+    if (onClose) onClose();
+    hideModal();
+  };
 
   return (
     <>
-      <Backdrop onClick={onClose} />
+      <Backdrop onClick={handleClose} />
       <ModalContainer className="container-fluid">
         {/* <CloseButton onClick={onClose}>&times;</CloseButton> */}
         <div className="row g-0">
