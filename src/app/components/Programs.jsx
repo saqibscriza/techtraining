@@ -18,13 +18,18 @@ const Programs = () => {
             description: "Java, Node.js, C#, Ruby, Python, PHP",
         },
         {
+            id: 'fullstack',
+            title: "Full Stack",
+            description: "Mean, Mern ",
+        },
+        {
             id: 'mobile',
             title: "Mobile App Development",
             description: "Andriod, Flutter",
         },
         {
+            id: 'digital',
             title: "Digital Marketing",
-            // description: "Become a pro in SEO, social media, and online advertising.",
         },
         {
             id: 'database',
@@ -32,18 +37,20 @@ const Programs = () => {
             description: "Relational (SQL) Databases, MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server, Google Cloud SQL, Azure SQL Database",
         },
         {
+            id: 'testing',
             title: "Software Testing",
-            // description: "Ensure software quality with top testing tools.",
-        }, {
-            id: 'fullstack',
-            title: "Full Stack",
-            description: "Mean, Mern ",
-        }, {
+            description: "Ensure software quality with top testing tools.",
+        },
+
+        {
+            id: 'graphic',
             title: " Graphic design ",
-            // description: "Ensure software quality with top testing tools.",
-        }, {
+            description: "Ensure software quality with top testing tools.",
+        },
+        {
+            id: 'prompt',
             title: " Prompt Engineering",
-            // description: "Ensure software quality with top testing tools.",
+            description: "Ensure software quality with top testing tools.",
         }
     ];
 

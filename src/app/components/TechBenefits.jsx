@@ -247,7 +247,138 @@ const TechBenefits = () => {
                     }
                 ]
             }
+        },
+        mobile: {
+            flutter: {
+                title: 'Flutter Benefits',
+                benefits: [
+                    {
+                        title: 'Single Codebase',
+                        description: 'Build for iOS, Android, web, and desktop from one Dart codebase'
+                    },
+                    {
+                        title: 'Hot Reload',
+                        description: 'See changes instantly without losing app state during development'
+                    },
+                    {
+                        title: 'Rich Widget Library',
+                        description: 'Beautiful, customizable widgets for pixel-perfect UIs'
+                    },
+                    {
+                        title: 'Native Performance',
+                        description: 'Compiles to native ARM code for smooth animations and fast execution'
+                    },
+                    {
+                        title: 'Growing Ecosystem',
+                        description: 'Supported by Google with increasing industry adoption'
+                    }
+                ]
+            },
+            android: {
+                title: 'Android (Kotlin) Benefits',
+                benefits: [
+                    {
+                        title: 'Official Android Language',
+                        description: 'Google\'s preferred language for modern Android development'
+                    },
+                    {
+                        title: 'Concise Syntax',
+                        description: 'Reduces boilerplate code by ~40% compared to Java'
+                    },
+                    {
+                        title: 'Null Safety',
+                        description: 'Built-in null prevention eliminates common crashes'
+                    },
+                    {
+                        title: 'Coroutines',
+                        description: 'Simplified asynchronous programming for responsive apps'
+                    },
+                    {
+                        title: 'Interoperability',
+                        description: '100% compatible with existing Java code and libraries'
+                    }
+                ]
+            },
+        },
+        database: {
+            sql: {
+                title: 'SQL Benefits',
+                benefits: [
+                    {
+                        title: 'Universal Query Language',
+                        description: 'Standardized across major relational databases like MySQL, PostgreSQL, and Oracle'
+                    },
+                    {
+                        title: 'Powerful Data Retrieval',
+                        description: 'Supports filtering, grouping, joins, and aggregations for complex insights'
+                    },
+                    {
+                        title: 'Industry-Wide Demand',
+                        description: 'Essential skill for developers, analysts, and data engineers'
+                    },
+                    {
+                        title: 'Strong Data Integrity',
+                        description: 'Enforces ACID compliance and relational constraints'
+                    },
+                    {
+                        title: 'Foundation for Advanced Tools',
+                        description: 'Used behind BI tools, ETL pipelines, and backend services'
+                    }
+                ]
+            },
+            mysql: {
+                title: 'MySQL Benefits',
+                benefits: [
+                    {
+                        title: 'Open Source & Widely Used',
+                        description: 'Powering web apps, CMS platforms, and large SaaS systems'
+                    },
+                    {
+                        title: 'Performance Optimization',
+                        description: 'Indexing, query caching, and schema design improve scalability'
+                    },
+                    {
+                        title: 'Secure Transactions',
+                        description: 'Supports ACID properties and role-based access control'
+                    },
+                    {
+                        title: 'Great for Web Stacks',
+                        description: 'Integrated easily with PHP, Node.js, Python, and Java'
+                    },
+                    {
+                        title: 'Reliable Community Support',
+                        description: 'Vibrant ecosystem with tools like phpMyAdmin and Workbench'
+                    }
+                ]
+            },
+            postgreSql: {
+                title: 'PostgreSQL Benefits',
+                benefits: [
+                    {
+                        title: 'Advanced SQL Features',
+                        description: 'Support for CTEs, window functions, full-text search, and triggers'
+                    },
+                    {
+                        title: 'JSON & NoSQL Capabilities',
+                        description: 'Store and query structured + unstructured data efficiently'
+                    },
+                    {
+                        title: 'Geospatial Support',
+                        description: 'PostGIS extension enables GIS and location-based applications'
+                    },
+                    {
+                        title: 'Enterprise-Grade Security',
+                        description: 'Role-based access, SSL, and row-level security options'
+                    },
+                    {
+                        title: 'Scalability & Extensibility',
+                        description: 'Designed for large datasets, with support for custom data types and functions'
+                    }
+                ]
+            }
         }
+
+
     };
 
     // Extract technology from URL

@@ -9,6 +9,14 @@ const ProgramsWeOffer = () => {
   const router = useRouter();
   const path = usePathname();// Get current URL path
 
+
+  const hiddenPaths = ['digital', 'graphic', 'testing', 'prompt'];
+  const shouldHide = hiddenPaths.some(hiddenPath => path.includes(hiddenPath));
+
+  if (shouldHide) {
+    return null; // Don't render anything for these paths
+  }
+
   // All programs data
   const programCategories = {
     frontend: {
@@ -92,31 +100,110 @@ const ProgramsWeOffer = () => {
       programs: [
         {
           id: 'mern',
-          image: '/MernLogo.png',
+          image: '/MernGroup.svg',
           title: 'MERN Stack',
           description: 'MongoDB, Express, React, and Node.js - JavaScript full stack solution.',
           cta: 'Choose Program'
         },
         {
           id: 'mean',
-          image: '/MeanLogo.png',
+          image: '/MeanGroup.svg',
           title: 'MEAN Stack',
           description: 'MongoDB, Express, Angular, and Node.js - end-to-end JavaScript framework.',
           cta: 'Choose Program'
         },
 
       ]
+    },
+    mobile: {
+      title: 'Mobile Development Programs',
+      subtitle: 'Cross-platform and native development',
+      programs: [
+        {
+          id: 'flutter',
+          image: '/flutter.png',
+          title: 'Flutter Development',
+          description: 'Build beautiful native apps for iOS and Android from a single codebase with Dart.',
+          cta: 'Choose Program',
+          highlights: [
+            'Hot Reload for instant updates',
+            'Rich widget library',
+            'Platform-specific integrations'
+          ]
+        },
+        {
+          id: 'android',
+          image: '/kotlin.jpeg',
+          title: 'Android (Kotlin)',
+          description: 'Modern Android development with Kotlin and Jetpack Compose.',
+          cta: 'Choose Program',
+          highlights: [
+            '100% interoperable with Java',
+            'Coroutines for async programming',
+            'Android Studio tooling'
+          ]
+        },
+      ],
+    },
+    database: {
+      title: 'Database & SQL Training Programs',
+      subtitle: 'Master Relational Databases and Query Languages',
+      programs: [
+        {
+          id: 'sql',
+          image: '/sql.png',
+          title: 'SQL Fundamentals',
+          description: 'Learn structured query language to retrieve, filter, and manipulate data in relational databases.',
+          cta: 'Choose Program',
+          highlights: [
+            'Querying with SELECT, WHERE, JOIN',
+            'Data filtering, grouping, and sorting',
+            'Hands-on with real-world datasets'
+          ]
+        },
+        {
+          id: 'mysql',
+          image: '/mysql.png',
+          title: 'MySQL Development',
+          description: 'Master MySQL for backend integration, web apps, and transactional systems.',
+          cta: 'Choose Program',
+          highlights: [
+            'Designing & normalizing relational schemas',
+            'Stored procedures and indexing',
+            'CRUD operations with Node.js or PHP'
+          ]
+        },
+        {
+          id: 'postgreSql',
+          image: '/postgresql.jpeg',
+          title: 'PostgreSQL Essentials',
+          description: 'Advanced open-source database skills with support for complex queries and large-scale systems.',
+          cta: 'Choose Program',
+          highlights: [
+            'Window functions & JSON support',
+            'PostGIS for geospatial queries',
+            'Performance tuning & indexing'
+          ]
+        },
+      ],
     }
+
   };
 
   // Determine which programs to show based on URL
   const getCurrentCategory = () => {
+
+
+    if (path.includes('/frontend')) return 'frontend';
     if (path.includes('/fullstack')) return 'fullstack';
     if (path.includes('/backend')) return 'backend';
+    if (path.includes('/mobile')) return 'mobile';
+    if (path.includes('/database')) return 'database';
     return 'frontend'; // default
   };
 
   const currentCategory = getCurrentCategory();
+
   const { title, subtitle, programs } = programCategories[currentCategory];
 
   const handleProgramSelect = (programId) => {
@@ -131,7 +218,7 @@ const ProgramsWeOffer = () => {
           <h2>{title}</h2>
         </SectionHeader>
 
-        <div className="row">
+        {/* <div className="row">
           {programs.map((program, index) => (
             <div className="col-md-4 mb-4" key={index}>
               <ProgramCard className="h-100">
@@ -148,6 +235,39 @@ const ProgramsWeOffer = () => {
               </ProgramCard>
             </div>
           ))}
+        </div> */}
+        <div className="row">
+          {programs.map((program, index) => {
+            // Determine column class based on number of programs
+            let colClass = 'col-md-4'; // default 3-column layout
+
+            if (programs.length === 2) {
+              colClass = 'col-md-6'; // 2 items = 6+6 columns
+            } else if (programs.length === 3) {
+              colClass = 'col-md-4'; // 3 items = 4+4+4 columns
+            } else if (programs.length === 4) {
+              colClass = 'col-md-6 col-lg-3'; // 4 items = 3+3+3+3 on desktop, 6+6 on mobile
+            } else if (programs.length >= 5) {
+              colClass = 'col-md-6 col-lg-4'; // 5+ items = 3 columns on desktop, 2 on mobile
+            }
+
+            return (
+              <div className={`${colClass} mb-4`} key={index}>
+                <ProgramCard className="h-100">
+                  <ProgramImageContainer>
+                    <ProgramImage src={program.image} alt={program.title} />
+                  </ProgramImageContainer>
+                  <ProgramContent>
+                    <h3>{program.title}</h3>
+                    <p>{program.description}</p>
+                    <ChooseButton onClick={() => handleProgramSelect(program.id)}>
+                      {program.cta}
+                    </ChooseButton>
+                  </ProgramContent>
+                </ProgramCard>
+              </div>
+            );
+          })}
         </div>
       </div>
     </ProgramsSection>

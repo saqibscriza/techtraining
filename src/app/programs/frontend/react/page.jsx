@@ -29,7 +29,6 @@ const ReactProgram = () => {
             <CourseDuration title="React JS"
                 description="React JS is a must-have skill for web developers, and our training program provides the perfect platform to master it. With expert guidance and practical experience, you’ll be well-prepared to work in the tech industry or pursue freelance opportunities." />
             <FAQSection title="React JS" />
-
         </div>
     );
 };
