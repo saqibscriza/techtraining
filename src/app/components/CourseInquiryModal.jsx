@@ -327,21 +327,23 @@ const CourseInquiryModal = ({ onClose }) => {
                   >
                     <option value="" disabled hidden>Select Course</option>
                     <option value="React JS Industrial Training">React JS Industrial Training</option>
-                    <option value="Advanced JavaScript">Advanced JavaScript</option>
                     <option value="HTML/CSS/JS Fundamentals">HTML/CSS/JS Fundamentals</option>
                     <option value="Angular Development">Angular Development</option>
-                    <option value="Frontend Development">Frontend Development</option>
                     <option value="Node.js Development">Node.js Development</option>
                     <option value="Java Backend Development">Java Backend Development</option>
                     <option value="Python Backend Development">Python Backend Development</option>
                     <option value="C# & .NET Development">C# & .NET Development</option>
                     <option value="PHP & Laravel Development">PHP & Laravel Development</option>
                     <option value="Ruby on Rails Development">Ruby on Rails Development</option>
-                    <option value="Full Stack Development">Full Stack Development</option>
                     <option value="MERN Stack Development">MERN Stack Development</option>
                     <option value="MEAN Stack Development">MEAN Stack Development</option>
                     <option value="Flutter Development">Flutter Development</option>
                     <option value="Android Kotlin Development">Android Kotlin Development</option>
+                    <option value="Database Management">Database Management</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="Software Testing">Software Testing</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Prompt Engineering">Prompt Engineering</option>
                   </select>
                 </FormGroup>
 

@@ -151,7 +151,7 @@ const ProgramsWeOffer = () => {
       programs: [
         {
           id: 'sql',
-          image: '/sql.png',
+          image: '/sql.webp',
           title: 'SQL Fundamentals',
           description: 'Learn structured query language to retrieve, filter, and manipulate data in relational databases.',
           cta: 'Choose Program',

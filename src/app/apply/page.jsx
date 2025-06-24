@@ -94,7 +94,7 @@ const page = () => {
   return (
     <ContactWrapper>
       <div className="mb-4">
-        <PageHeader title="Apply" />
+        <PageHeader title="Apply Now" />
       </div>
       <div className="container-fluid">
         {/* <div>

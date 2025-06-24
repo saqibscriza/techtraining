@@ -976,7 +976,6 @@ const CourseCurriculum = () => {
                 ]
             }
         }
-
     };
 
     // Extract category and technology from URL
