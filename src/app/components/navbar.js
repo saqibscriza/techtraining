@@ -8,7 +8,7 @@ import { useState } from 'react';
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-
+console.log('updatedd')
   return (
     <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#301a52' }}>
       <div className="container-fluid">
