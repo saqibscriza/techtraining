@@ -355,7 +355,7 @@ const CourseInquiryModal = ({ onClose }) => {
                   <img src="/phoneModal.svg" alt="phone" />
                   <div className="text">
                     <strong>PHONE</strong>
-                    <div>+91 95992 87037</div>
+                    <div>+91 9599287097</div>
                   </div>
                 </ContactItem>
 
@@ -363,7 +363,7 @@ const CourseInquiryModal = ({ onClose }) => {
                   <img src="/email.svg" alt="email" />
                   <div className="text">
                     <strong>EMAIL</strong>
-                    <div>info@thetechtraining.com</div>
+                    <div>info@techtraining.in</div>
                   </div>
                 </ContactItem>
               </ContactInfo>

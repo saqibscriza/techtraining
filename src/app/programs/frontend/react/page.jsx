@@ -20,8 +20,7 @@ const ReactProgram = () => {
                 title="React.js Training In Noida:"
                 description="Want to start web development or increase your skills in the profile? Well, React JS happens to be one of today's most sought-after technologies as it is meant for a modern, responsive, dynamic web application. Our  React JS Industrial Training in Noida  is designed by us for students, fresher graduates, and also professionals who want to learn that powerful JavaScript library and hence get a strong foothold within the highly competitive tech-industry."
             />
-            <WhyLearn title="Why Learn React JS?" subtitle="React JS – Powering Modern Web Interfaces." description="React JS, a child of Facebook, is an extremely popular library to design an interactive user interface. With its flexibility, great performance, and community support, the skill is absolutely important to possess for web developers.
-" />
+            <WhyLearn title="Why Learn React JS?" subtitle="React JS – Powering Modern Web Interfaces." description="React JS, a child of Facebook, is an extremely popular library to design an interactive user interface. With its flexibility, great performance, and community support, the skill is absolutely important to possess for web developers." />
             <TechBenefits />
             <CourseCurriculum />
             <TrainingProgram title="React JS" />
