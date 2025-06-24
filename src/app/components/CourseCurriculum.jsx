@@ -554,11 +554,58 @@ const CourseCurriculum = () => {
                 topics: [
                     {
                         title: "MERN Architecture",
-                        description: "Understand the full stack workflow.",
-                        image: "/Mern/mern.png",
+                        description: "Understand the full stack workflow and component interaction.",
+                        image: "/React/intro.png",
+                        bgColor: "#5B72EE"
+                    },
+                    {
+                        title: "React Fundamentals",
+                        description: "Master component-based UI development with React.",
+                        image: "/React/Props.png",
                         bgColor: "#00CBB8"
                     },
-                    // ... other MERN topics
+                    {
+                        title: "Node.js & Express",
+                        description: "Build RESTful APIs and server-side logic.",
+                        image: "/React/state.png",
+                        bgColor: "#29B9E7"
+                    },
+                    {
+                        title: "MongoDB Integration",
+                        description: "Work with NoSQL database and Mongoose ODM.",
+                        image: "/React/hooks.png",
+                        bgColor: "#EE7D5B"
+                    },
+                    {
+                        title: "Authentication",
+                        description: "Implement JWT and session-based auth systems.",
+                        image: "/React/hooks.png",
+                        bgColor: "#00CB58"
+                    },
+                    {
+                        title: "State Management",
+                        description: "Manage application state with Redux/Context API.",
+                        image: "/React/state.png",
+                        bgColor: "#296EE7"
+                    },
+                    {
+                        title: "API Integration",
+                        description: "Connect frontend to backend services.",
+                        image: "/React/api.png",
+                        bgColor: "#EE915B"
+                    },
+                    {
+                        title: "Deployment",
+                        description: "Deploy full-stack apps to cloud platforms.",
+                        image: "/React/projects.png",
+                        bgColor: "#009FCB"
+                    },
+                    {
+                        title: "Real Project",
+                        description: "Build and deploy a complete MERN application.",
+                        image: "/React/portfolio.png",
+                        bgColor: "#F2526A"
+                    }
                 ]
             },
             mean: {
@@ -566,15 +613,370 @@ const CourseCurriculum = () => {
                 description: "End-to-end JavaScript with Angular.",
                 topics: [
                     {
-                        title: "MEAN Setup",
-                        description: "Configure the complete stack.",
-                        image: "/Mean/mean.png",
-                        bgColor: "#DD0031"
+                        title: "MEAN Architecture",
+                        description: "Understand the complete stack setup.",
+                        image: "/React/intro.png",
+                        bgColor: "#5B72EE"
                     },
-                    // ... other MEAN topics
+                    {
+                        title: "Angular Fundamentals",
+                        description: "Master components, directives and services.",
+                        image: "/React/Props.png",
+                        bgColor: "#00CBB8"
+                    },
+                    {
+                        title: "TypeScript",
+                        description: "Leverage type safety across the stack.",
+                        image: "/React/state.png",
+                        bgColor: "#29B9E7"
+                    },
+                    {
+                        title: "Express Backend",
+                        description: "Build robust APIs with middleware support.",
+                        image: "/React/hooks.png",
+                        bgColor: "#EE7D5B"
+                    },
+                    {
+                        title: "MongoDB with Mongoose",
+                        description: "Model data and create relationships.",
+                        image: "/React/hooks.png",
+                        bgColor: "#00CB58"
+                    },
+                    {
+                        title: "RxJS Observables",
+                        description: "Handle asynchronous operations reactively.",
+                        image: "/React/state.png",
+                        bgColor: "#296EE7"
+                    },
+                    {
+                        title: "Authentication",
+                        description: "Implement secure user authentication.",
+                        image: "/React/api.png",
+                        bgColor: "#EE915B"
+                    },
+                    {
+                        title: "Deployment Strategies",
+                        description: "Deploy MEAN apps with best practices.",
+                        image: "/React/projects.png",
+                        bgColor: "#009FCB"
+                    },
+                    {
+                        title: "Capstone Project",
+                        description: "Build and present a complete MEAN application.",
+                        image: "/React/portfolio.png",
+                        bgColor: "#F2526A"
+                    }
+                ]
+            }
+        },
+        mobile: {
+            flutter: {
+                title: "Flutter Development Curriculum",
+                description: "Master cross-platform app development with Flutter framework.",
+                topics: [
+                    {
+                        title: "Introduction to Flutter",
+                        description: "Overview of Flutter framework, Dart language basics, and widget architecture.",
+                        image: "/React/intro.png",
+                        bgColor: "#5B72EE"
+                    },
+                    {
+                        title: "Widgets & UI Building",
+                        description: "Learn to build UIs with Material/Cupertino widgets and custom components.",
+                        image: "/React/Props.png",
+                        bgColor: "#00CBB8"
+                    },
+                    {
+                        title: "State Management",
+                        description: "Master various state solutions (Provider, Bloc, Riverpod) for complex apps.",
+                        image: "/React/state.png",
+                        bgColor: "#29B9E7"
+                    },
+                    {
+                        title: "Navigation & Routing",
+                        description: "Implement navigation between screens with named routes and arguments.",
+                        image: "/React/hooks.png",
+                        bgColor: "#EE7D5B"
+                    },
+                    {
+                        title: "Firebase Integration",
+                        description: "Connect to Firebase services (Auth, Firestore, Storage) in Flutter apps.",
+                        image: "/React/hooks.png",
+                        bgColor: "#00CB58"
+                    },
+                    {
+                        title: "Platform Channels",
+                        description: "Access native device features using platform-specific code.",
+                        image: "/React/state.png",
+                        bgColor: "#296EE7"
+                    },
+                    {
+                        title: "API Integration",
+                        description: "Fetch and display data from REST APIs using Dio or http package.",
+                        image: "/React/api.png",
+                        bgColor: "#EE915B"
+                    },
+                    {
+                        title: "Flutter Animations",
+                        description: "Create smooth UI animations using implicit and explicit animation widgets.",
+                        image: "/React/projects.png",
+                        bgColor: "#009FCB"
+                    },
+                    {
+                        title: "App Publishing",
+                        description: "Prepare and publish apps to Google Play Store and Apple App Store.",
+                        image: "/React/portfolio.png",
+                        bgColor: "#F2526A"
+                    }
+                ]
+            },
+            android: {
+                title: "Android (Kotlin) Curriculum",
+                description: "Build native Android applications with modern Kotlin.",
+                topics: [
+                    {
+                        title: "Kotlin Fundamentals",
+                        description: "Master Kotlin syntax, null safety, extensions, and coroutines.",
+                        image: "/React/intro.png",
+                        bgColor: "#5B72EE"
+                    },
+                    {
+                        title: "Android Studio Basics",
+                        description: "Navigate Android Studio and understand project structure.",
+                        image: "/React/Props.png",
+                        bgColor: "#00CBB8"
+                    },
+                    {
+                        title: "Jetpack Components",
+                        description: "Build apps with ViewModel, LiveData, Room, and Navigation.",
+                        image: "/React/state.png",
+                        bgColor: "#29B9E7"
+                    },
+                    {
+                        title: "UI with Compose",
+                        description: "Create modern UIs with declarative Jetpack Compose framework.",
+                        image: "/React/hooks.png",
+                        bgColor: "#EE7D5B"
+                    },
+                    {
+                        title: "Networking & APIs",
+                        description: "Make HTTP requests with Retrofit and handle JSON with Moshi/Gson.",
+                        image: "/React/hooks.png",
+                        bgColor: "#00CB58"
+                    },
+                    {
+                        title: "Database with Room",
+                        description: "Implement local persistence using Room SQLite abstraction.",
+                        image: "/React/state.png",
+                        bgColor: "#296EE7"
+                    },
+                    {
+                        title: "Dependency Injection",
+                        description: "Manage dependencies with Hilt for cleaner architecture.",
+                        image: "/React/api.png",
+                        bgColor: "#EE915B"
+                    },
+                    {
+                        title: "Testing",
+                        description: "Write unit and instrumented tests for Android apps.",
+                        image: "/React/projects.png",
+                        bgColor: "#009FCB"
+                    },
+                    {
+                        title: "Play Store Deployment",
+                        description: "Prepare release builds and publish to Google Play Store.",
+                        image: "/React/portfolio.png",
+                        bgColor: "#F2526A"
+                    }
+                ]
+            },
+
+        },
+        database: {
+            sql: {
+                title: "SQL Curriculum",
+                description: "Learn to query, manage, and manipulate data in relational databases.",
+                topics: [
+                    {
+                        title: "Introduction to Databases & SQL",
+                        description: "Understand relational database concepts and SQL syntax basics.",
+                        image: "/React/intro.png",
+                        bgColor: "#5B72EE"
+                    },
+                    {
+                        title: "Data Retrieval with SELECT",
+                        description: "Query single and multiple tables using SELECT, WHERE, ORDER BY, and LIMIT.",
+                        image: "/React/Props.png",
+                        bgColor: "#00CBB8"
+                    },
+                    {
+                        title: "Filtering & Aggregation",
+                        description: "Use functions like COUNT, SUM, GROUP BY, HAVING, and DISTINCT.",
+                        image: "/React/state.png",
+                        bgColor: "#29B9E7"
+                    },
+                    {
+                        title: "Joins & Subqueries",
+                        description: "Master INNER, LEFT, RIGHT, and FULL JOINs, plus nested queries.",
+                        image: "/React/hooks.png",
+                        bgColor: "#EE7D5B"
+                    },
+                    {
+                        title: "Data Manipulation (DML)",
+                        description: "INSERT, UPDATE, DELETE records while maintaining data integrity.",
+                        image: "/React/hooks.png",
+                        bgColor: "#00CB58"
+                    },
+                    {
+                        title: "Database Design & Normalization",
+                        description: "Design relational schemas and apply 1NF, 2NF, 3NF rules.",
+                        image: "/React/state.png",
+                        bgColor: "#296EE7"
+                    },
+                    {
+                        title: "Constraints & Indexes",
+                        description: "Use PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK, and performance indexes.",
+                        image: "/React/api.png",
+                        bgColor: "#EE915B"
+                    },
+                    {
+                        title: "Views & Stored Procedures",
+                        description: "Simplify queries with views and encapsulate logic with stored procedures.",
+                        image: "/React/projects.png",
+                        bgColor: "#009FCB"
+                    },
+                    {
+                        title: "Practice & Projects",
+                        description: "Hands-on SQL problems and mini-projects with real datasets.",
+                        image: "/React/portfolio.png",
+                        bgColor: "#F2526A"
+                    }
+                ]
+            },
+
+            mysql: {
+                title: "MySQL Curriculum",
+                description: "Learn to manage and optimize databases using MySQL.",
+                topics: [
+                    {
+                        title: "MySQL Basics",
+                        description: "Set up MySQL, understand clients/tools, and run basic queries.",
+                        image: "/React/intro.png",
+                        bgColor: "#5B72EE"
+                    },
+                    {
+                        title: "MySQL Data Types & Constraints",
+                        description: "Explore column types, constraints, and table creation.",
+                        image: "/React/Props.png",
+                        bgColor: "#00CBB8"
+                    },
+                    {
+                        title: "CRUD Operations",
+                        description: "Work with SELECT, INSERT, UPDATE, DELETE commands and conditions.",
+                        image: "/React/state.png",
+                        bgColor: "#29B9E7"
+                    },
+                    {
+                        title: "Joins & Relationships",
+                        description: "Connect tables with JOINs and enforce relationships with keys.",
+                        image: "/React/hooks.png",
+                        bgColor: "#EE7D5B"
+                    },
+                    {
+                        title: "Stored Procedures & Triggers",
+                        description: "Automate logic with procedures and use triggers for audits.",
+                        image: "/React/hooks.png",
+                        bgColor: "#00CB58"
+                    },
+                    {
+                        title: "Indexes & Performance",
+                        description: "Use indexes and EXPLAIN plans to optimize queries.",
+                        image: "/React/state.png",
+                        bgColor: "#296EE7"
+                    },
+                    {
+                        title: "Security & Permissions",
+                        description: "Manage users, roles, and privileges for secure access.",
+                        image: "/React/api.png",
+                        bgColor: "#EE915B"
+                    },
+                    {
+                        title: "Backup & Restore",
+                        description: "Use mysqldump, data export/import, and restore strategies.",
+                        image: "/React/projects.png",
+                        bgColor: "#009FCB"
+                    },
+                    {
+                        title: "Web App Integration",
+                        description: "Connect MySQL to Node.js, PHP or Python for dynamic web apps.",
+                        image: "/React/portfolio.png",
+                        bgColor: "#F2526A"
+                    }
+                ]
+            },
+
+            postgreSql: {
+                title: "PostgreSQL Curriculum",
+                description: "Build enterprise-grade skills with the advanced PostgreSQL system.",
+                topics: [
+                    {
+                        title: "PostgreSQL Setup & Tools",
+                        description: "Install PostgreSQL and use pgAdmin & CLI tools efficiently.",
+                        image: "/React/intro.png",
+                        bgColor: "#5B72EE"
+                    },
+                    {
+                        title: "Advanced SQL & Joins",
+                        description: "Write optimized multi-table queries with window functions & CTEs.",
+                        image: "/React/Props.png",
+                        bgColor: "#00CBB8"
+                    },
+                    {
+                        title: "Schema Design & Relationships",
+                        description: "Model real-world systems with proper normalization and constraints.",
+                        image: "/React/state.png",
+                        bgColor: "#29B9E7"
+                    },
+                    {
+                        title: "Functions & Triggers",
+                        description: "Create PL/pgSQL functions and automate events with triggers.",
+                        image: "/React/hooks.png",
+                        bgColor: "#EE7D5B"
+                    },
+                    {
+                        title: "JSON & Arrays",
+                        description: "Work with semi-structured data using PostgreSQL’s JSON/JSONB types.",
+                        image: "/React/hooks.png",
+                        bgColor: "#00CB58"
+                    },
+                    {
+                        title: "PostGIS (Geospatial Data)",
+                        description: "Query and visualize spatial data with PostGIS extensions.",
+                        image: "/React/state.png",
+                        bgColor: "#296EE7"
+                    },
+                    {
+                        title: "Indexing & Performance Tuning",
+                        description: "Optimize large datasets using B-tree, GIN, BRIN indexes.",
+                        image: "/React/api.png",
+                        bgColor: "#EE915B"
+                    },
+                    {
+                        title: "Backup, Restore & Replication",
+                        description: "Handle data migrations, backups, and master-slave replication.",
+                        image: "/React/projects.png",
+                        bgColor: "#009FCB"
+                    },
+                    {
+                        title: "Enterprise Use Cases",
+                        description: "Apply PostgreSQL to analytics, web apps, and complex business systems.",
+                        image: "/React/portfolio.png",
+                        bgColor: "#F2526A"
+                    }
                 ]
             }
         }
+
     };
 
     // Extract category and technology from URL
