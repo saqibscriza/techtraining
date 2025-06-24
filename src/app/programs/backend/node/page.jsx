@@ -3,8 +3,6 @@ import ProgramBanner from '@/app/components/ProgramBanner';
 import ProgramOverview from '@/app/components/ProgramOverview';
 import CourseDuration from '@/app/components/CourseDuration';
 import FAQSection from '@/app/components/FAQSection';
-import ReactBenefits from '@/app/components/REACT COMPONENTS/ReactBenefits';
-import ReactCourseCurriculum from '@/app/components/REACT COMPONENTS/ReactCourseCurriculum';
 import TrainingProgram from '@/app/components/TrainingProgram';
 import WhoShouldAttend from '@/app/components/WhoShouldAttend';
 import WhyLearn from '@/app/components/WhyLearn';
