@@ -8,9 +8,6 @@ import Transform from "./components/Transform";
 
 
 
-
-
-
 export default function Home() {
 
     return (

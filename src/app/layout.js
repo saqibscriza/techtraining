@@ -8,6 +8,7 @@ import StyledComponentsRegistry from "./registry";
 import WhatAppsLogo from "./components/WhatAppsLogo";
 import { ModalProvider } from "./contexts/ModalContext";
 
+import toast, { Toaster } from 'react-hot-toast';
 
 // import Home from "./page";
 
@@ -33,7 +34,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+
         <StyledComponentsRegistry>
+          <Toaster position="top-right" />
           <WhatAppsLogo />
           <Navbar />
           <ModalProvider>
