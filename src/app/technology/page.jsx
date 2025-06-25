@@ -3,7 +3,7 @@
 import React from 'react'
 import PageHeader from '../components/PageHeader'
 import styled from 'styled-components';
-import WhatAppsLogo from '../components/WhatAppsLogo';
+
 
 
 const ContactWrapper = styled.div`
@@ -117,10 +117,10 @@ const page = () => {
   return (
     <div>
       <PageHeader title="Technologies" />
-      <WhatAppsLogo />
+
       <div>
         <Container2 className='container-fluid'>
-          
+
           <Conainer1 className='mt-5'>
             <div >
               <h3>Front-End Technologies</h3>
@@ -204,12 +204,12 @@ const page = () => {
                 <div className='row'>
                   <div className='col-lg-6 col-md-12 col-sm-12'>
                     <ResponsiveImg6  >
-                      <img  src="/MernGroup.svg" alt="Mean Logo" />
+                      <img src="/MernGroup.svg" alt="Mean Logo" />
                     </ResponsiveImg6>
                   </div>
                   <div className='col-lg-6 col-md-12 col-sm-12'>
                     <ResponsiveImg6 >
-                      <img  src="/MeanGroup.svg" alt="Mern Logo" />
+                      <img src="/MeanGroup.svg" alt="Mern Logo" />
                     </ResponsiveImg6>
                   </div>
                 </div>
@@ -223,15 +223,15 @@ const page = () => {
             </div>
             <div className='row'>
               <div className='col-10'>
-               <div className='row'>
+                <div className='row'>
                   <div className='col-lg-6 col-md-12 col-sm-12'>
                     <ResponsiveImg6  >
-                      <img  src="/MernGroup.svg" alt="Mean Logo" />
+                      <img src="/MernGroup.svg" alt="Mean Logo" />
                     </ResponsiveImg6>
                   </div>
                   <div className='col-lg-6 col-md-12 col-sm-12'>
                     <ResponsiveImg6 >
-                      <img  src="/MeanGroup.svg" alt="Mern Logo" />
+                      <img src="/MeanGroup.svg" alt="Mern Logo" />
                     </ResponsiveImg6>
                   </div>
                 </div>

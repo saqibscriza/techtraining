@@ -14,30 +14,48 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Rohit Sharma, Delhi",
-      role: "Full Stack Development",
+      name: "Satyam Sharma, Delhi",
+      role: "Node.js Developer",
       rating: "★★★★★",
-      title: "Excellent Training Experience!",
-      content: "I enrolled in the Full Stack Development course at The Tech Training – T3, and it was a game-changer for my career. The instructors are highly knowledgeable and focus on real-world applications. Thanks to their hands-on training, I secured a job within two months of completing the course!",
-      image: "/career.jpeg"
+      title: "Mastered Backend Development!",
+      content: "The Node.js training at The Tech Training – T3 was exceptional. We built real-world REST APIs, worked with Express.js, and learned authentication with JWT. The hands-on project implementing a full e-commerce backend helped me land my current developer role.",
+      image: "/one.jpg"
     },
     {
       id: 2,
-      name: "Priya Patel, Mumbai",
-      role: "Data Science",
+      name: "Ritu Raj, Noida",
+      role: "Flutter Developer",
       rating: "★★★★★",
-      title: "Transformative Learning!",
-      content: "The Data Science program exceeded my expectations. The curriculum was comprehensive and the projects were industry-relevant. I'm now working as a Data Analyst at a leading tech company.",
-      image: "/images/testimonial2.jpg" // Added image path
+      title: "From Zero to Flutter Pro!",
+      content: "The Flutter course gave me complete mobile development skills. We built cross-platform apps with Firebase integration, state management using Provider, and complex UI animations. I published my first app on Play Store within a month of completing the course!",
+      image: "/two.jpeg"
     },
     {
       id: 3,
-      name: "Amit Kumar, Bangalore",
-      role: "Cloud Computing",
+      name: "Ayush Singhal, Noida",
+      role: "React.js Developer",
+      rating: "★★★★★",
+      title: "Frontend Transformation!",
+      content: "The React.js industrial training covered everything from hooks to Redux Toolkit. Building a complete dashboard with authentication and API integration gave me the confidence to tackle complex frontend challenges at my current job.",
+      image: "/three.jpg"
+    },
+    {
+      id: 4,
+      name: "Anand Ranjan, Noida",
+      role: "Python/Django Developer",
       rating: "★★★★☆",
-      title: "Great Practical Exposure!",
-      content: "The cloud computing course provided excellent hands-on experience with AWS and Azure. The trainers were supportive and helped me get certified. Highly recommended for anyone looking to upskill.",
-      image: "/images/testimonial3.jpg" // Added image path
+      title: "Full Stack Python Mastery!",
+      content: "The Python with Django course was incredibly thorough. From Django ORM to REST framework and deployment, every concept was taught with practical examples. My final project was a complete CRM system that became my portfolio centerpiece.",
+      image: "/four.jpeg"
+    },
+    {
+      id: 5,
+      name: "Prem Gupta, Delhi",
+      role: "Java Spring Boot Developer",
+      rating: "★★★★★",
+      title: "Enterprise Java Made Easy!",
+      content: "The Java Backend course with Spring Boot transformed my career. Learning microservices architecture, Spring Security, and Hibernate prepared me perfectly for enterprise application development. I got a 40% salary hike after certification!",
+      image: "/five.jpeg"
     }
   ];
 
@@ -170,8 +188,8 @@ const TestimonialImageContainer = styled.div`
 `;
 
 const TestimonialImage = styled.img`
-  width: auto;
-  height: auto;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 50%;
 `;

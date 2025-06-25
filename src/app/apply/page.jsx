@@ -4,7 +4,7 @@ import React from "react";
 import PageHeader from "../components/PageHeader";
 
 import styled from 'styled-components';
-import WhatAppsLogo from "../components/WhatAppsLogo";
+
 
 
 const ContactWrapper = styled.div`
@@ -165,7 +165,6 @@ const page = () => {
             </Box3>
           </BoxContainer>
         </UpperFooter> */}
-
 
         <div style={{ display: 'flex', justifyContent: 'center' }} >
           <FormContainer style={{ backgroundColor: '#301a52', }} className="mb-5">

@@ -1,104 +1,138 @@
+
 // 'use client';
 // import React, { useState } from 'react';
 // import styled from 'styled-components';
+// import { useModal } from '../contexts/ModalContext';
 
-// const CourseInquiryModal = ({ show, onClose }) => {
+// const CourseInquiryModal = ({ onClose }) => {
 
+//   const { hideModal } = useModal();
 
-
-//   if (!show) return null;
+//   const handleClose = () => {
+//     if (onClose) onClose();
+//     hideModal();
+//   };
 
 //   return (
 //     <>
-//       <Backdrop onClick={onClose} />
-//       <ModalContainer>
-//         <ModalHeader>
+//       <Backdrop onClick={handleClose} />
+//       <ModalContainer className="container-fluid">
+//         {/* <CloseButton onClick={onClose}>&times;</CloseButton> */}
+//         <div className="row g-0">
+//           {/* Left Column - Form Section (6 columns) */}
+//           <div className="col-lg-6">
+//             <FormSection>
+//               <ModalHeader className="d-flex justify-content-between align-items-center">
+//                 <ModalTitle>Choose <span style={{ color: "#47137B" }}>Course</span></ModalTitle>
+//               </ModalHeader>
 
-//           <CloseButton onClick={onClose}>&times;</CloseButton>
-//         </ModalHeader>
+//               <DialogIntro>
+//                 Interested in upgrading your skills? Want to know more about our course modules, duration, fees, or certification?
+//               </DialogIntro>
 
-//         <ModalContent>
-//           <FormSection>
-//             <ModalTitle>Choose <span style={{ color: "#47137B" }}>Course</span></ModalTitle>
-//             <DialogIntro>
-//               Interested in upgrading your skills? Want to know more about our course modules, duration, fees, or certification?
-//             </DialogIntro>
+//               <Form>
+//                 <FormGroup className="mb-3">
+//                   <Input
+//                     type="text"
+//                     name="name"
+//                     placeholder='Name'
+//                     required
+//                     className="form-control"
+//                   />
+//                 </FormGroup>
 
-//             <Form >
-//               <FormGroup>
+//                 <FormGroup className="mb-3">
+//                   <Input
+//                     type="email"
+//                     name="email"
+//                     placeholder='Email'
+//                     required
+//                     className="form-control"
+//                   />
+//                 </FormGroup>
 
-//                 <Input
-//                   type="text"
-//                   name="name"
-//                   placeholder='Name'
-//                   required
-//                 />
-//               </FormGroup>
+//                 <FormGroup className="mb-3">
+//                   <Input
+//                     type="tel"
+//                     name="phone"
+//                     placeholder='Phone'
+//                     required
+//                     className="form-control"
+//                   />
+//                 </FormGroup>
 
-//               <FormGroup>
+//                 <FormGroup className="mb-3">
+//                   <select
+//                     name="course"
+//                     required
+//                     className="form-select"
+//                     defaultValue=""
+//                   >
+//                     <option value="" disabled hidden>Select Course</option>
+//                     <option value="React JS Industrial Training">React JS Industrial Training</option>
+//                     <option value="HTML/CSS/JS Fundamentals">HTML/CSS/JS Fundamentals</option>
+//                     <option value="Angular Development">Angular Development</option>
+//                     <option value="Node.js Development">Node.js Development</option>
+//                     <option value="Java Backend Development">Java Backend Development</option>
+//                     <option value="Python Backend Development">Python Backend Development</option>
+//                     <option value="C# & .NET Development">C# & .NET Development</option>
+//                     <option value="PHP & Laravel Development">PHP & Laravel Development</option>
+//                     <option value="Ruby on Rails Development">Ruby on Rails Development</option>
+//                     <option value="MERN Stack Development">MERN Stack Development</option>
+//                     <option value="MEAN Stack Development">MEAN Stack Development</option>
+//                     <option value="Flutter Development">Flutter Development</option>
+//                     <option value="Android Kotlin Development">Android Kotlin Development</option>
+//                     <option value="Database Management">Database Management</option>
+//                     <option value="Digital Marketing">Digital Marketing</option>
+//                     <option value="Software Testing">Software Testing</option>
+//                     <option value="Graphic Design">Graphic Design</option>
+//                     <option value="Prompt Engineering">Prompt Engineering</option>
+//                   </select>
+//                 </FormGroup>
 
-//                 <Input
-//                   type="email"
-//                   name="email"
-//                   placeholder='email'
-//                   required
-//                 />
-//               </FormGroup>
+//                 <SubmitButton type="submit" className="w-100">
+//                   SEND
+//                 </SubmitButton>
+//               </Form>
 
-//               <FormGroup>
+//               <ContactInfo className="mt-4 pt-3">
+//                 <ContactItem className="mb-2">
+//                   <img src="/phoneModal.svg" alt="phone" />
+//                   <div className="text">
+//                     <strong>PHONE</strong>
+//                     <div>+91 9599287097</div>
+//                   </div>
+//                 </ContactItem>
 
-//                 <Input
-//                   type="tel"
-//                   name="phone"
-//                   placeholder='phone'
-//                   required
-//                 />
-//               </FormGroup>
+//                 <ContactItem>
+//                   <img src="/email.svg" alt="email" />
+//                   <div className="text">
+//                     <strong>EMAIL</strong>
+//                     <div>info@techtraining.in</div>
+//                   </div>
+//                 </ContactItem>
+//               </ContactInfo>
 
-//               <FormGroup>
-//                 <Select
-//                   name="course"
-//                   required
+//             </FormSection>
+//           </div>
 
-
-//                 >
-//                   <option value="" disabled hidden>Select Course</option>
-//                   <option value="React JS Industrial Training">React JS Industrial Training</option>
-//                   <option value="Advanced JavaScript">Advanced JavaScript</option>
-//                   <option value="Frontend Development">Frontend Development</option>
-//                   <option value="Full Stack Development">Full Stack Development</option>
-//                 </Select>
-//               </FormGroup>
-
-//               <SubmitButton type="submit">SEND</SubmitButton>
-//             </Form>
-
-//             <ContactInfo>
-//               <ContactItem>
-//                 <strong>PHONE</strong>
-//                 <div>+91 95992 87037</div>
-//               </ContactItem>
-
-//               <ContactItem>
-//                 <strong>EMAIL</strong>
-//                 <div>info@thetechtraining.com</div>
-//               </ContactItem>
-//             </ContactInfo>
-//           </FormSection>
-
-//           <ImageSection>
-//             <CourseImage
-//               src="/ModalImage.png"
-//               alt="Course Inquiry"
-//             />
-//           </ImageSection>
-//         </ModalContent>
+//           {/* Right Column - Image Section (6 columns) */}
+//           <div className="col-lg-6 d-none d-lg-block">
+//             <ImageSection>
+//               <CourseImage
+//                 src="/ModalImage.png"
+//                 alt="Course Inquiry"
+//                 className="img-fluid"
+//               />
+//             </ImageSection>
+//           </div>
+//         </div>
 //       </ModalContainer>
 //     </>
 //   );
 // };
 
-// // Styled Components
+// // Styled Components (Only the necessary custom styles)
 // const Backdrop = styled.div`
 //   position: fixed;
 //   top: 0;
@@ -114,243 +148,291 @@
 //   top: 50%;
 //   left: 50%;
 //   transform: translate(-50%, -50%);
-//   width: 950px;
-//   max-width: 90%;
-//   max-height: 70vh;
+//   width: 90%;
+//   max-width: 950px;
 //   background: white;
 //   border-radius: 24px;
 //   z-index: 1001;
 //   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 //   overflow: hidden;
-//   display: flex;
-//   flex-direction: column;
-//   padding:3rem 2rem;
-// `;
-
-// const ModalHeader = styled.div`
-
-// `;
-
-// const ModalTitle = styled.h2`
-// color:#000000;
-// font-size:54px;
-// font-weight:700;
-// `
-
-// const CloseButton = styled.button`
-//   position: absolute;
-//   top: 1rem;
-//   right: 1.5rem;
-//   background: none;
-//   border: none;
-//   color: white;
-//   font-size: 1.5rem;
-//   cursor: pointer;
-// `;
-
-// const ModalContent = styled.div`
-//   display: flex;
-//   height: 100%;
-//   overflow: auto;
-
-//   @media (max-width: 768px) {
-//     flex-direction: column;
-//   }
+//   padding: 1rem 3rem;
 // `;
 
 // const FormSection = styled.div`
-//   flex: 1;
-//   padding: 1.5rem;
-//   min-width: 0;
+//   padding: 2rem;
 // `;
 
-// const ImageSection = styled.div`
-//   width: 300px;
-//   background: #F8F9FA;
-//   display: flex;
-//   flex-direction: column;
-//   padding: 1.5rem;
+// const ModalHeader = styled.div`
+//   margin-bottom: 1.5rem;
+// `;
+
+// const ModalTitle = styled.h2`
+//   color: #000000;
+//   font-size: 2.5rem;
+//   font-weight: 700;
+//   margin-bottom: .3rem;
 
 //   @media (max-width: 768px) {
-//     width: 100%;
-//     order: -1;
-//     padding-bottom: 0;
+//     font-size: 2rem;
 //   }
+// `;
+
+// const CloseButton = styled.button`
+
+//   background: none;
+//   border: none;
+//   color: #000;
+//   font-size: 1.5rem;
+//   cursor: pointer;
+//   padding: 0.5rem;
+
 // `;
 
 // const DialogIntro = styled.p`
 //   color: #000000;
 //   margin-bottom: 1.5rem;
-//   font-size: 0.9rem;
-//   font-weight:600;
+//   font-size: 1rem;
+//   font-weight: 600;
 // `;
 
 // const Form = styled.form`
-//   display: flex;
-//   flex-direction: column;
-//   gap: 1rem;
+//   // Bootstrap classes handle most styling
 // `;
 
 // const FormGroup = styled.div`
-//   display: flex;
-//   flex-direction: column;
+//   // Bootstrap classes handle most styling
 // `;
 
-
-
 // const Input = styled.input`
-//   padding: 0.5rem;
-//   border: 1px solid #ddd;
-//   border-radius: 4px;
-//   font-size: 0.9rem;
-//   background-color: white;
+//   // Additional custom styles if needed
+//   &:focus {
+//     border-color: #F48B01;
+//     box-shadow: 0 0 0 0.25rem rgba(244, 139, 1, 0.25);
+//   }
 // `;
 
 // const Select = styled.select`
-//   padding: 0.5rem;
-//   border: 1px solid #ddd;
-//   border-radius: 4px;
-//   font-size: 0.9rem;
-//   background-color: white;
+//   // Additional custom styles if needed
+//   &:focus {
+//     border-color: #F48B01;
+//     box-shadow: 0 0 0 0.25rem rgba(244, 139, 1, 0.25);
+//   }
 // `;
 
 // const SubmitButton = styled.button`
-//   background-color: #F48B01;
+//   background-color: #692FA2;
 //   color: white;
 //   border: none;
 //   border-radius: 4px;
 //   padding: 0.75rem;
 //   font-weight: 600;
-//   margin-top: 1rem;
 //   cursor: pointer;
+//   transition: all 0.2s;
+
+//   &:hover {
+//     background-color: #e07d00;
+//     transform: translateY(-2px);
+//   }
 // `;
 
 // const ContactInfo = styled.div`
-//   margin-top: 2rem;
-//   padding-top: 1rem;
 //   border-top: 1px solid #eee;
-//   font-size: 0.8rem;
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
 // `;
 
 // const ContactItem = styled.div`
-//   margin-bottom: 0.75rem;
+//   display: flex;
+//   align-items: flex-start;
+//   gap: 10px; /* space between image and text */
+//   width: 48%;
 
-//   strong {
-//     color: #2F327D;
-//     display: block;
-//     margin-bottom: 0.25rem;
+//   img {
+//     width: 24px;
+//     height: 24px;
+//     margin-top: 4px;
 //   }
 
-//   div {
-//     color: #696984;
+//   .text {
+//     display: flex;
+//     flex-direction: column;
+
+//     strong {
+//       color: #000000;
+//       font-size: 14px;
+//     }
+
+//     div {
+//       color: #DD5471;
+//       font-size: 13px;
+//     }
 //   }
+// `;
+
+
+// const ImageSection = styled.div`
+//   background: #F8F9FA;
+//   height: 100%;
+//   display: flex;
+//   align-items: center;
+//   padding: 2rem;
 // `;
 
 // const CourseImage = styled.img`
 //   width: 100%;
 //   height: auto;
-//   border-radius: 4px;
+//   border-radius: 8px;
 //   object-fit: cover;
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 // `;
 
 // export default CourseInquiryModal;
 
 
+
+
+
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { useModal } from '../contexts/ModalContext';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 const CourseInquiryModal = ({ onClose }) => {
-
   const { hideModal } = useModal();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [submitSuccess, setSubmitSuccess] = React.useState(false);
 
   const handleClose = () => {
     if (onClose) onClose();
     hideModal();
+    reset(); // Reset form fields when closing
+  };
+
+  const onSubmit = async (data) => {
+    setIsSubmitting(true);
+    try {
+      // Replace with your actual API endpoint
+      const response = await axios.post('http://192.168.20.156:5000/api/contact', data);
+      console.log(response)
+      if (response.status === 201) {
+        setSubmitSuccess(true);
+        reset(); // Reset form after successful submission
+        // Auto-close after 3 seconds if you want
+        setTimeout(() => handleClose(), 7000);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // Handle error (show error message, etc.)
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <>
       <Backdrop onClick={handleClose} />
       <ModalContainer className="container-fluid">
-        {/* <CloseButton onClick={onClose}>&times;</CloseButton> */}
         <div className="row g-0">
-          {/* Left Column - Form Section (6 columns) */}
+          {/* Left Column - Form Section */}
           <div className="col-lg-6">
             <FormSection>
               <ModalHeader className="d-flex justify-content-between align-items-center">
                 <ModalTitle>Choose <span style={{ color: "#47137B" }}>Course</span></ModalTitle>
+                <CloseButton onClick={handleClose}>&times;</CloseButton>
               </ModalHeader>
 
               <DialogIntro>
                 Interested in upgrading your skills? Want to know more about our course modules, duration, fees, or certification?
               </DialogIntro>
 
-              <Form>
-                <FormGroup className="mb-3">
-                  <Input
-                    type="text"
-                    name="name"
-                    placeholder='Name'
-                    required
-                    className="form-control"
-                  />
-                </FormGroup>
+              {submitSuccess ? (
+                <SuccessMessage>
+                  <SuccessIcon>✓</SuccessIcon>
+                  <h3>Thank you for your inquiry!</h3>
+                  <p>We've received your information and will contact you shortly.</p>
+                </SuccessMessage>
+              ) : (
+                <Form onSubmit={handleSubmit(onSubmit)}>
+                  <FormGroup className="mb-3">
+                    <Input
+                      type="text"
+                      placeholder='Name'
+                      className="form-control"
+                      {...register("name", { required: "Name is required" })}
+                    />
+                    {errors.name && <ErrorText>{errors.name.message}</ErrorText>}
+                  </FormGroup>
 
-                <FormGroup className="mb-3">
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder='Email'
-                    required
-                    className="form-control"
-                  />
-                </FormGroup>
+                  <FormGroup className="mb-3">
+                    <Input
+                      type="email"
+                      placeholder='Email'
+                      className="form-control"
+                      {...register("email", {
+                        required: "Email is required",
+                        pattern: {
+                          value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                          message: "Invalid email address"
+                        }
+                      })}
+                    />
+                    {errors.email && <ErrorText>{errors.email.message}</ErrorText>}
+                  </FormGroup>
 
-                <FormGroup className="mb-3">
-                  <Input
-                    type="tel"
-                    name="phone"
-                    placeholder='Phone'
-                    required
-                    className="form-control"
-                  />
-                </FormGroup>
+                  <FormGroup className="mb-3">
+                    <Input
+                      type="tel"
+                      placeholder='Phone'
+                      className="form-control"
+                      {...register("phone", {
+                        required: "Phone number is required",
+                        pattern: {
+                          value: /^[0-9]{10}$/,
+                          message: "Please enter a valid 10-digit phone number"
+                        }
+                      })}
+                    />
+                    {errors.phone && <ErrorText>{errors.phone.message}</ErrorText>}
+                  </FormGroup>
 
-                <FormGroup className="mb-3">
-                  <select
-                    name="course"
-                    required
-                    className="form-select"
-                    defaultValue=""
-                  >
-                    <option value="" disabled hidden>Select Course</option>
-                    <option value="React JS Industrial Training">React JS Industrial Training</option>
-                    <option value="HTML/CSS/JS Fundamentals">HTML/CSS/JS Fundamentals</option>
-                    <option value="Angular Development">Angular Development</option>
-                    <option value="Node.js Development">Node.js Development</option>
-                    <option value="Java Backend Development">Java Backend Development</option>
-                    <option value="Python Backend Development">Python Backend Development</option>
-                    <option value="C# & .NET Development">C# & .NET Development</option>
-                    <option value="PHP & Laravel Development">PHP & Laravel Development</option>
-                    <option value="Ruby on Rails Development">Ruby on Rails Development</option>
-                    <option value="MERN Stack Development">MERN Stack Development</option>
-                    <option value="MEAN Stack Development">MEAN Stack Development</option>
-                    <option value="Flutter Development">Flutter Development</option>
-                    <option value="Android Kotlin Development">Android Kotlin Development</option>
-                    <option value="Database Management">Database Management</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="Software Testing">Software Testing</option>
-                    <option value="Graphic Design">Graphic Design</option>
-                    <option value="Prompt Engineering">Prompt Engineering</option>
-                  </select>
-                </FormGroup>
+                  <FormGroup className="mb-3">
+                    <Select
+                      className="form-select"
+                      defaultValue=""
+                      {...register("course", { required: "Please select a course" })}
+                    >
+                      <option value="" disabled hidden>Select Course</option>
+                      <option value="React JS Industrial Training">React JS Industrial Training</option>
+                      <option value="HTML/CSS/JS Fundamentals">HTML/CSS/JS Fundamentals</option>
+                      <option value="Angular Development">Angular Development</option>
+                      <option value="Node.js Development">Node.js Development</option>
+                      <option value="Java Backend Development">Java Backend Development</option>
+                      <option value="Python Backend Development">Python Backend Development</option>
+                      <option value="C# & .NET Development">C# & .NET Development</option>
+                      <option value="PHP & Laravel Development">PHP & Laravel Development</option>
+                      <option value="Ruby on Rails Development">Ruby on Rails Development</option>
+                      <option value="MERN Stack Development">MERN Stack Development</option>
+                      <option value="MEAN Stack Development">MEAN Stack Development</option>
+                      <option value="Flutter Development">Flutter Development</option>
+                      <option value="Android Kotlin Development">Android Kotlin Development</option>
+                      <option value="Database Management">Database Management</option>
+                      <option value="Digital Marketing">Digital Marketing</option>
+                      <option value="Software Testing">Software Testing</option>
+                      <option value="Graphic Design">Graphic Design</option>
+                      <option value="Prompt Engineering">Prompt Engineering</option>
+                    </Select>
+                    {errors.course && <ErrorText>{errors.course.message}</ErrorText>}
+                  </FormGroup>
 
-                <SubmitButton type="submit" className="w-100">
-                  SEND
-                </SubmitButton>
-              </Form>
+                  <SubmitButton type="submit" className="w-100" disabled={isSubmitting}>
+                    {isSubmitting ? 'SENDING...' : 'SEND'}
+                  </SubmitButton>
+                </Form>
+              )}
 
               <ContactInfo className="mt-4 pt-3">
                 <ContactItem className="mb-2">
@@ -369,11 +451,10 @@ const CourseInquiryModal = ({ onClose }) => {
                   </div>
                 </ContactItem>
               </ContactInfo>
-
             </FormSection>
           </div>
 
-          {/* Right Column - Image Section (6 columns) */}
+          {/* Right Column - Image Section */}
           <div className="col-lg-6 d-none d-lg-block">
             <ImageSection>
               <CourseImage
@@ -389,7 +470,26 @@ const CourseInquiryModal = ({ onClose }) => {
   );
 };
 
-// Styled Components (Only the necessary custom styles)
+// Add these new styled components
+const SuccessMessage = styled.div`
+  text-align: center;
+  padding: 2rem;
+  color: #47137B;
+`;
+
+const SuccessIcon = styled.div`
+  font-size: 3rem;
+  color: #4BB543;
+  margin-bottom: 1rem;
+`;
+
+const ErrorText = styled.span`
+  color: #DD5471;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+`;
+
 const Backdrop = styled.div`
   position: fixed;
   top: 0;
@@ -543,5 +643,7 @@ const CourseImage = styled.img`
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 `;
+
+// ... (keep all your existing styled components)
 
 export default CourseInquiryModal;
