@@ -72,6 +72,7 @@ const ApplyButton = styled.button`
 
 const Transform = () => {
   const { showModal, hideModal } = useModal();
+  
   const handleButtonClick = () => {
     showModal(<CourseInquiryModal />);
   };
