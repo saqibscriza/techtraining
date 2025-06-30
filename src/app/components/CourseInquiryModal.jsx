@@ -1,6 +1,5 @@
 
 
-
 'use client';
 import React from 'react';
 import styled from 'styled-components';
@@ -26,7 +25,7 @@ const CourseInquiryModal = ({ onClose }) => {
     setIsSubmitting(true);
     try {
       // Replace with your actual API endpoint
-      const response = await axios.post('http://192.168.20.156:5000/api/contact', data);
+      const response = await axios.post('https://thetechtraining.in/backend/api/contact', data);
       console.log(response)
       if (response.status === 201) {
         setSubmitSuccess(true);
