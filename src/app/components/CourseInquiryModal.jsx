@@ -6,10 +6,12 @@ import styled from 'styled-components';
 import { useModal } from '../contexts/ModalContext';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const CourseInquiryModal = ({ onClose }) => {
   const { hideModal } = useModal();
-  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const { register, handleSubmit, formState: { errors }, reset, trigger } = useForm();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submitSuccess, setSubmitSuccess] = React.useState(false);
 
@@ -27,13 +29,19 @@ const CourseInquiryModal = ({ onClose }) => {
       console.log(response)
       if (response.status === 201) {
         setSubmitSuccess(true);
-        reset(); // Reset form after successful submission
-        // Auto-close after 3 seconds if you want
-        setTimeout(() => handleClose(), 7000);
+        reset();
+        // toast.success(`Success: ${response.message || 'Successfully submitted'}`, {
+        //   duration: 4000,
+        // });
+        setTimeout(() => handleClose(), 4000);
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      // Handle error (show error message, etc.)
+      if (error.response) {
+        toast.error(`Error: ${error.message || 'Submission failed'}`, {
+          duration: 4000,
+        });
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -64,16 +72,25 @@ const CourseInquiryModal = ({ onClose }) => {
                 </SuccessMessage>
               ) : (
                 <Form onSubmit={handleSubmit(onSubmit)}>
+                  {/* Name Field - Alphabets Only */}
                   <FormGroup className="mb-3">
                     <Input
                       type="text"
                       placeholder='Name'
                       className="form-control"
-                      {...register("name", { required: "Name is required" })}
+                      {...register("name", {
+                        required: "Name is required",
+                        pattern: {
+                          value: /^[A-Za-z ]+$/i,
+                          message: "Name should contain only alphabets"
+                        },
+                        onChange: () => trigger("name") // Trigger validation on change
+                      })}
                     />
                     {errors.name && <ErrorText>{errors.name.message}</ErrorText>}
                   </FormGroup>
 
+                  {/* Email Field */}
                   <FormGroup className="mb-3">
                     <Input
                       type="email"
@@ -84,12 +101,14 @@ const CourseInquiryModal = ({ onClose }) => {
                         pattern: {
                           value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                           message: "Invalid email address"
-                        }
+                        },
+                        onChange: () => trigger("email")
                       })}
                     />
                     {errors.email && <ErrorText>{errors.email.message}</ErrorText>}
                   </FormGroup>
 
+                  {/* Phone Field - Starts with 6-9, exactly 10 digits */}
                   <FormGroup className="mb-3">
                     <Input
                       type="tel"
@@ -98,19 +117,25 @@ const CourseInquiryModal = ({ onClose }) => {
                       {...register("phone", {
                         required: "Phone number is required",
                         pattern: {
-                          value: /^[0-9]{10}$/,
-                          message: "Please enter a valid 10-digit phone number"
-                        }
+                          value: /^[6-9]\d{9}$/,
+                          message: "Please enter a valid 10-digit number starting with 6-9"
+                        },
+                        onChange: () => trigger("phone")
                       })}
+                      maxLength="10"
                     />
                     {errors.phone && <ErrorText>{errors.phone.message}</ErrorText>}
                   </FormGroup>
 
+                  {/* Course Selection */}
                   <FormGroup className="mb-3">
                     <Select
                       className="form-select"
                       defaultValue=""
-                      {...register("course", { required: "Please select a course" })}
+                      {...register("course", {
+                        required: "Please select a course",
+                        onChange: () => trigger("course")
+                      })}
                     >
                       <option value="" disabled hidden>Select Course</option>
                       <option value="React JS Industrial Training">React JS Industrial Training</option>
@@ -249,7 +274,6 @@ const CloseButton = styled.button`
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
-  
 `;
 
 const DialogIntro = styled.p`
@@ -354,3 +378,7 @@ const CourseImage = styled.img`
 // ... (keep all your existing styled components)
 
 export default CourseInquiryModal;
+
+
+
+
