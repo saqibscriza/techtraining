@@ -999,9 +999,26 @@ const CourseCurriculum = () => {
                     <p className="lead">{description}</p>
                 </SectionHeader>
 
-                <div className="row">
+                {/* <div className="row">
                     {topics.map((topic, index) => (
                         <div className="col-md-6 col-lg-4 mb-5" key={index}>
+                            <TopicCardContainer>
+                                <TopicImageContainer $bgColor={topic.bgColor}>
+                                    <TopicImage src={topic.image} alt={topic.title} />
+                                </TopicImageContainer>
+                                <TopicCard>
+                                    <TopicContent>
+                                        <h3>{topic.title}</h3>
+                                        <p>{topic.description}</p>
+                                    </TopicContent>
+                                </TopicCard>
+                            </TopicCardContainer>
+                        </div>
+                    ))}
+                </div> */}
+                <div className="row">
+                    {topics.map((topic, index) => (
+                        <div className="col-12 col-sm-6 col-lg-4 mb-4" key={index}>
                             <TopicCardContainer>
                                 <TopicImageContainer $bgColor={topic.bgColor}>
                                     <TopicImage src={topic.image} alt={topic.title} />
@@ -1026,6 +1043,18 @@ const CourseCurriculum = () => {
 const CurriculumSection = styled.section`
   background-color: #ECF2F9;
   padding: 4rem 8rem;
+  
+  @media (max-width: 1200px) {
+    padding: 3rem 4rem;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 2rem;
+  }
+  
+  @media (max-width: 576px) {
+    padding: 1.5rem;
+  }
 `;
 
 const SectionHeader = styled.div`
@@ -1035,8 +1064,16 @@ const SectionHeader = styled.div`
     color: #252641;
     margin-bottom: 1rem;
     
+    @media (max-width: 992px) {
+      font-size: 2.25rem;
+    }
+    
     @media (max-width: 768px) {
       font-size: 2rem;
+    }
+    
+    @media (max-width: 576px) {
+      font-size: 1.75rem;
     }
   }
   
@@ -1045,18 +1082,33 @@ const SectionHeader = styled.div`
     color: #696984;
     max-width: 800px;
     margin: 0 auto;
+    
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+    }
+    
+    @media (max-width: 576px) {
+      font-size: 1rem;
+    }
   }
 `;
 
 const TopicCardContainer = styled.div`
   position: relative;
-
   height: 100%;
+  min-height:300px; 
+  padding-top: 40px;
+  max-width: 300px;
+  margin: 0 auto;
   
-  padding-top: 40px; /* Space for the overlapping image */
-  max-width:300px;
- 
- 
+  @media (max-width: 768px) {
+    
+    padding-top: 35px;
+  }
+  @media (max-width: 600px) {
+    min-height:250px; 
+    max-width: 250px;
+  }
 `;
 
 const TopicImageContainer = styled.div`
@@ -1066,7 +1118,7 @@ const TopicImageContainer = styled.div`
   transform: translateX(-50%);
   width: 70px;
   height: 70px;
-  background: ${props => props.$bgColor || 'white'}; // Use provided bgColor or default to white
+  background: ${props => props.$bgColor || 'white'};
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1074,26 +1126,44 @@ const TopicImageContainer = styled.div`
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 2;
   
- 
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 const TopicImage = styled.img`
   width: 50px;
   height: 50px;
   object-fit: contain;
+  
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 const TopicCard = styled.div`
   background: #fff;
   border-radius: 10px;
-  padding: 3rem 3rem 1.5rem; /* More top padding */
-  min-height:290px;
+  padding: 3rem 1.5rem 1.5rem;
+  min-height: 290px;
   height: 100%;
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
   position: relative;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  
+  @media (max-width: 992px) {
+    padding: 2.5rem 1.25rem 1.25rem;
+    min-height: 260px;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 2rem 1rem 1rem;
+    min-height: auto;
+  }
   
   &:hover {
     transform: translateY(-5px);
@@ -1113,6 +1183,15 @@ const TopicContent = styled.div`
     margin-bottom: 0.75rem;
     text-align: center;
     margin-top: 1rem;
+    
+    @media (max-width: 992px) {
+      font-size: 1.15rem;
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
   }
   
   p {
@@ -1120,6 +1199,15 @@ const TopicContent = styled.div`
     line-height: 1.6;
     margin-bottom: 0;
     text-align: center;
+    
+    @media (max-width: 992px) {
+      font-size: 0.95rem;
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
   }
 `;
 

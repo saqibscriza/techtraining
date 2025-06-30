@@ -73,6 +73,9 @@ const FAQSection = ({ title }) => {
 const FAQContainer = styled.section`
   background-color: #f8f9fa;
   padding: 1rem 5rem;
+  @media (max-width: 800px) {
+    padding: 1rem 1rem;
+  }
 `;
 
 const Main = styled.div`

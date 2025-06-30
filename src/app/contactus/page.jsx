@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import axios from "axios";
 import toast from "react-hot-toast";
-
+import { apiConfig } from "@/config/config";
 
 
 
@@ -21,7 +21,7 @@ const page = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await axios.post('http://192.168.20.156:5000/api/question', data, {
+      const response = await axios.post(`${apiConfig.baseUrl}${apiConfig.endpoints.question}`, data, {
         headers: {
           'Content-Type': 'application/json'
         }

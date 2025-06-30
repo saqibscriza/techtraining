@@ -61,6 +61,9 @@ const CourseDuration = ({
 // Styled Components
 const Main = styled.div`
   padding: 0rem 5rem;
+  @media (max-width: 800px) {
+    padding: 0rem 2rem;
+  }
 `;
 
 const DurationSection = styled.section`
@@ -68,6 +71,9 @@ const DurationSection = styled.section`
   color:#FFFFFF;
   padding: 4rem 4rem;
   border-radius:20px;
+  @media (max-width: 800px) {
+    padding: 4rem 1rem;
+  }
 `;
 
 const SectionHeader = styled.div`
@@ -103,6 +109,7 @@ const ContentWrapper = styled.div`
     line-height: 1.8;
     margin-bottom: 1.5rem;
   }
+
 `;
 
 const DurationHighlight = styled.p`
@@ -115,6 +122,10 @@ const DurationHighlight = styled.p`
   
   strong {
     color: #F48B01;
+  }
+
+  @media (max-width: 900px) {
+    padding:0px 20px;
   }
 `;
 
