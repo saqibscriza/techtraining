@@ -1,6 +1,5 @@
 
 
-
 'use client';
 import React from 'react';
 import styled from 'styled-components';
@@ -25,7 +24,9 @@ const CourseInquiryModal = ({ onClose }) => {
   const onSubmit = async (data) => {
     setIsSubmitting(true);
     try {
+
       const response = await axios.post(`${apiConfig.baseUrl}${apiConfig.endpoints.contact}`, data);
+
       console.log(response)
       if (response.status === 201) {
         setSubmitSuccess(true);
