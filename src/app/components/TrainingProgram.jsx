@@ -74,6 +74,10 @@ const TrainingProgram = ({ title }) => {
 const ProgramBenefits = styled.section`
   background-color: #f8f9fa;
   padding: 4rem 8rem;
+
+  @media (max-width: 800px) {
+    padding: 4rem 2rem;
+    }
 `;
 
 const SectionHeader = styled.div`

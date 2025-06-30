@@ -5,42 +5,43 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'next/image';
 
 const T3 = () => {
-    return (
-        <BannerContainer className="container-fluid p-5">
-            <div className="row g-0">
-                {/* Text Content Column - Left-aligned */}
-                <div className="col-lg-6 col-12">
-                    <BannerContent className="d-flex flex-column justify-content-center py-5 px-4 ps-lg-5">
-                        <StartNow className="mb-2">Start Now!</StartNow>
-                        <MainHeading className="mb-3">T3 - Train, Transform, Triumph.</MainHeading>
-                        <Description className="pe-lg-5">
-                            T3 - The Tech Training founded by Scriza pvt. ltd. in Noida offers hands-on industrial training programs that bridge the gap between academics and industry demands.
-                        </Description>
-                    </BannerContent>
-                </div>
+  return (
+    <BannerContainer className="container-fluid p-5">
+      <div className="row g-0">
+        {/* Text Content Column - Left-aligned */}
+        <div className="col-lg-6 col-12">
+          <BannerContent className="d-flex flex-column justify-content-center py-5 px-4 ps-lg-5">
+            <StartNow className="mb-2">Start Now!</StartNow>
+            <MainHeading className="mb-3">T3 - Train, Transform, Triumph.</MainHeading>
+            <Description className="pe-lg-5">
+              T3 - The Tech Training founded by Scriza pvt. ltd. in Noida offers hands-on industrial training programs that bridge the gap between academics and industry demands.
+            </Description>
+          </BannerContent>
+        </div>
 
-                {/* Image Column */}
-                <div className="col-lg-6 col-12 ">
-                    <ImageContainer className="h-100">
-                        <Image
-                            src="/T3.webp"
-                            alt="T3 Training"
-                            className="img-fluid"
-                            style={{
-                                objectFit: 'contain', // Changed from 'cover' to 'contain' to see the full image
-                                width: '100%',
-                                height: '400px',
-                                maxHeight: '100%'
-                            }}
-                            priority
-                            width={600} // Increased from 400 for better quality
-                            height={800} // Increased from 700 for better quality
-                        />
-                    </ImageContainer>
-                </div>
-            </div>
-        </BannerContainer>
-    );
+        {/* Image Column */}
+        <div className="col-lg-6 col-12 ">
+          <ImageContainer className="h-100">
+            <Image
+              src="/T3.webp"
+              alt="T3 Training"
+              className="img-fluid"
+              style={{
+                objectFit: 'contain', // Changed from 'cover' to 'contain' to see the full image
+                width: '100%',
+                height: '400px',
+                maxHeight: '100%'
+              }}
+              priority
+              width={600} // Increased from 400 for better quality
+              height={800} // Increased from 700 for better quality
+            />
+          </ImageContainer>
+        </div>
+
+      </div>
+    </BannerContainer>
+  );
 };
 
 // Styled Components

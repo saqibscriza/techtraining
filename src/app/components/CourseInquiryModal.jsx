@@ -7,7 +7,7 @@ import { useModal } from '../contexts/ModalContext';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
-
+import { apiConfig } from '@/config/config';
 
 const CourseInquiryModal = ({ onClose }) => {
   const { hideModal } = useModal();
@@ -24,8 +24,9 @@ const CourseInquiryModal = ({ onClose }) => {
   const onSubmit = async (data) => {
     setIsSubmitting(true);
     try {
-      // Replace with your actual API endpoint
-      const response = await axios.post('https://thetechtraining.in/backend/api/contact', data);
+
+      const response = await axios.post(`${apiConfig.baseUrl}${apiConfig.endpoints.contact}`, data);
+
       console.log(response)
       if (response.status === 201) {
         setSubmitSuccess(true);

@@ -43,6 +43,10 @@ const WhyLearn = ({
 const SectionContainer = styled.section`
   background-color: #f8f9fa;
   padding:0px 8rem;
+
+  @media (max-width: 900px) {
+    padding:0px 2rem;
+  }
 `;
 
 const Heading = styled.div`
@@ -54,6 +58,7 @@ margin-bottom:30px;
 
 const ContentWrapper = styled.div`
   padding: 1rem;
+ 
 `;
 
 const SectionTitle = styled.h1`

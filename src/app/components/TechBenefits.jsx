@@ -420,6 +420,9 @@ const TechBenefits = () => {
 // Styled Components (same as original)
 const BenefitsSection = styled.section`
   padding: 4rem 8.4rem;
+  @media (max-width: 900px) {
+    padding: 4rem 2rem;
+    }
 `;
 
 const SectionHeader = styled.div`
