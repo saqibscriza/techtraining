@@ -19,32 +19,24 @@ const page = () => {
 
   const onSubmit = async (data) => {
     setIsSubmitting(true);
-
     try {
-      const response = await axios.post(`${apiConfig.baseUrl}${apiConfig.endpoints.question}`, data, {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
 
-      if (response.status === 200 || response.status === 201) {
+      const response = await axios.post(`${apiConfig.baseUrl}${apiConfig.endpoints.contact}`, data);
+
+      console.log(response)
+      if (response.status === 201) {
         setSubmitSuccess(true);
-        toast.success('Your question has been submitted successfully!', {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
+        reset();
+        toast.success(`Success: ${response.message || 'Successfully submitted'}`, {
+          duration: 4000,
         });
-        reset(); // Reset form fields if using react-hook-form
+
       }
     } catch (error) {
       console.error('Error submitting form:', error);
       if (error.response) {
-        toast.error(error.response.data.message || 'Submission failed. Please try again.', {
-          position: "top-right",
-          autoClose: 5000,
+        toast.error(`Error: ${error.message || 'Submission failed'}`, {
+          duration: 4000,
         });
       }
     } finally {
@@ -56,7 +48,6 @@ const page = () => {
     <ContactWrapper>
       <div >
         <PageHeader title="Contacts" />
-
       </div>
       <div className="container-fluid">
         <div>
@@ -221,7 +212,7 @@ const page = () => {
 
             {submitSuccess ? (
               <SuccessMessage>
-                Thank you for your question! We'll get back to you soon.
+                Thank you for contacting! We'll get back to you soon.
               </SuccessMessage>
             ) : (
               <Form1 onSubmit={handleSubmit(onSubmit)}>
@@ -231,23 +222,20 @@ const page = () => {
                     <Label htmlFor="name" className="form-label">
                       <span style={{ color: "red", fontSize: '20px' }}>*</span> Name
                     </Label>
-                    <input
+                    <Input
                       type="text"
-                      className={`form-control ${errors.name ? 'is-invalid' : ''}`}
-                      id="name"
-                      placeholder="Enter Your Name"
+                      placeholder='Name'
+                      className="form-control"
                       {...register("name", {
                         required: "Name is required",
                         pattern: {
-                          value: /^[A-Za-z\s]+$/,
+                          value: /^[A-Za-z ]+$/i,
                           message: "Name should contain only alphabets"
                         },
-                        onChange: () => trigger("name")
+                        onChange: () => trigger("name") // Trigger validation on change
                       })}
                     />
-                    {errors.name && (
-                      <div className="invalid-feedback">{errors.name.message}</div>
-                    )}
+                    {errors.name && <ErrorText>{errors.name.message}</ErrorText>}
                   </div>
 
                   {/* Email Field */}
@@ -255,11 +243,10 @@ const page = () => {
                     <Label htmlFor="email" className="form-label">
                       <span style={{ color: "red", fontSize: '20px' }}>*</span> Email address
                     </Label>
-                    <input
+                    <Input
                       type="email"
-                      className={`form-control ${errors.email ? 'is-invalid' : ''}`}
-                      id="email"
-                      placeholder="Enter Email address"
+                      placeholder='Email'
+                      className="form-control"
                       {...register("email", {
                         required: "Email is required",
                         pattern: {
@@ -269,9 +256,7 @@ const page = () => {
                         onChange: () => trigger("email")
                       })}
                     />
-                    {errors.email && (
-                      <div className="invalid-feedback">{errors.email.message}</div>
-                    )}
+                    {errors.email && <ErrorText>{errors.email.message}</ErrorText>}
                   </div>
 
                   {/* Mobile Number Field */}
@@ -279,35 +264,55 @@ const page = () => {
                     <Label htmlFor="mobile" className="form-label">
                       <span style={{ color: "red", fontSize: '20px' }}>*</span> Mobile Number
                     </Label>
-                    <input
+                    <Input
                       type="tel"
-                      className={`form-control ${errors.mobile ? 'is-invalid' : ''}`}
-                      id="mobile"
-                      placeholder="Enter Your Mobile Number"
-                      maxLength="10"
-                      {...register("mobile", {
-                        required: "Mobile number is required",
+                      placeholder='Phone'
+                      className="form-control"
+                      {...register("phone", {
+                        required: "Phone number is required",
                         pattern: {
                           value: /^[6-9]\d{9}$/,
                           message: "Please enter a valid 10-digit number starting with 6-9"
                         },
-                        onChange: () => trigger("mobile")
+                        onChange: () => trigger("phone")
                       })}
+                      maxLength="10"
                     />
-                    {errors.mobile && (
-                      <div className="invalid-feedback">{errors.mobile.message}</div>
-                    )}
+                    {errors.phone && <ErrorText>{errors.phone.message}</ErrorText>}
                   </div>
 
                   {/* Remark Field */}
                   <div className="mb-3">
-                    <Label htmlFor="remark" className="form-label"><span style={{ color: "red", fontSize: '20px' }}>* </span>Remark</Label>
-                    <textarea
-                      className="form-control"
-                      id="remark"
-                      rows="3"
-                      {...register("remark")}
-                    ></textarea>
+                    <Label htmlFor="remark" className="form-label"><span style={{ color: "red", fontSize: '20px' }}>* </span>Select Course</Label>
+                    <Select
+                      className="form-select"
+                      defaultValue=""
+                      {...register("course", {
+                        required: "Please select a course",
+                        onChange: () => trigger("course")
+                      })}
+                    >
+                      <option value="" disabled hidden>Select Course</option>
+                      <option value="React JS Industrial Training">React JS Industrial Training</option>
+                      <option value="HTML/CSS/JS Fundamentals">HTML/CSS/JS Fundamentals</option>
+                      <option value="Angular Development">Angular Development</option>
+                      <option value="Node.js Development">Node.js Development</option>
+                      <option value="Java Backend Development">Java Backend Development</option>
+                      <option value="Python Backend Development">Python Backend Development</option>
+                      <option value="C# & .NET Development">C# & .NET Development</option>
+                      <option value="PHP & Laravel Development">PHP & Laravel Development</option>
+                      <option value="Ruby on Rails Development">Ruby on Rails Development</option>
+                      <option value="MERN Stack Development">MERN Stack Development</option>
+                      <option value="MEAN Stack Development">MEAN Stack Development</option>
+                      <option value="Flutter Development">Flutter Development</option>
+                      <option value="Android Kotlin Development">Android Kotlin Development</option>
+                      <option value="Database Management">Database Management</option>
+                      <option value="Digital Marketing">Digital Marketing</option>
+                      <option value="Software Testing">Software Testing</option>
+                      <option value="Graphic Design">Graphic Design</option>
+                      <option value="Prompt Engineering">Prompt Engineering</option>
+                    </Select>
+                    {errors.course && <ErrorText>{errors.course.message}</ErrorText>}
                   </div>
 
                   <div className="col-auto">
@@ -424,5 +429,21 @@ const SuccessIcon = styled.div`
   font-size: 10rem;
   color: #4BB543;
   margin-bottom: 1rem;
+`;
+
+const Input = styled.input`
+  // Additional custom styles if needed
+  &:focus {
+    border-color: #F48B01;
+    box-shadow: 0 0 0 0.25rem rgba(244, 139, 1, 0.25);
+  }
+`;
+
+const Select = styled.select`
+  // Additional custom styles if needed
+  &:focus {
+    border-color: #F48B01;
+    box-shadow: 0 0 0 0.25rem rgba(244, 139, 1, 0.25);
+  }
 `;
 

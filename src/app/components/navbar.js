@@ -14,8 +14,8 @@ export default function Navbar() {
   console.log("updatedd");
 
 
-     const { showModal, hideModal } = useModal();
-  
+  const { showModal, hideModal } = useModal();
+
   const handleButtonClick = () => {
     showModal(<CourseInquiryModal />);
   };
@@ -31,8 +31,8 @@ export default function Navbar() {
             className="logo_image"
             src="/images/logo.png"
             alt="The Tech Training"
-            width="190"
-            height="70"
+            width="auto"
+            height="50"
           />
         </Link>
 
@@ -72,9 +72,8 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link ${
-                  pathname === "/training" ? "active" : ""
-                }`}
+                className={`nav-link ${pathname === "/training" ? "active" : ""
+                  }`}
                 href="/training"
               >
                 TRAINING COURSES
@@ -85,9 +84,8 @@ export default function Navbar() {
             </li> */}
             <li className="nav-item">
               <Link
-                className={`nav-link ${
-                  pathname === "/contactus" ? "active" : ""
-                }`}
+                className={`nav-link ${pathname === "/contactus" ? "active" : ""
+                  }`}
                 href="/contactus"
               >
                 CONTACT US

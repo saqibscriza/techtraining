@@ -53,8 +53,8 @@ const Footer = () => {
             // src="//thetechtraining.in/wp-content/uploads/2018/07/t3-logo-1.png"
             src="/images/logo.png"
             alt="The Tech Training"
-            width="190"
-            height="70"
+            width="auto"
+            height="50"
           />
         </Link>
       </div>
